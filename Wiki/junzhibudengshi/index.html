@@ -1,0 +1,2409 @@
+
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+        <link rel="canonical" href="https://vertex-mo.github.io/Wiki/Wiki/junzhibudengshi/">
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../favicon.ico">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>均值不等式 - VertexMO Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,400i,700%7CFira+Mono&display=fallback">
+        <style>body,input{font-family:"Fira Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Fira Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+      <link rel="manifest" type="application/manifest+json" href="../../manifest.webmanifest" crossorigin="use-credentials">
+    
+    
+      <link rel="stylesheet" href="../../_static/css/extra.css?v=12">
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-124485594-1", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="white" data-md-color-accent="red">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#_1" tabindex="0" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://vertex-mo.github.io/Wiki" title="VertexMO Wiki" aria-label="VertexMO Wiki" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">school</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              VertexMO Wiki
+            </span>
+            <span class="md-header-nav__topic">
+              
+                均值不等式
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/vertex-mo/Wiki/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    Wiki
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../.." class="md-tabs__link">
+          简介
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../primary/num/" class="md-tabs__link">
+          初中部分
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../algintro/" class="md-tabs__link md-tabs__link--active">
+          代数
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../geointro/" class="md-tabs__link">
+          几何
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../numintro/" class="md-tabs__link">
+          数论
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../comintro/" class="md-tabs__link">
+          组合
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../heshi/" class="md-tabs__link">
+          杂项
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://vertex-mo.github.io/Wiki" title="VertexMO Wiki" class="md-nav__button md-logo">
+      
+        <i class="md-icon">school</i>
+      
+    </a>
+    VertexMO Wiki
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/vertex-mo/Wiki/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    Wiki
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      简介
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        简介
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../intro/latex/" title="文本编辑指南" class="md-nav__link">
+      文本编辑指南
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../intro/about/" title="关于本项目" class="md-nav__link">
+      关于本项目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../intro/htc/" title="帮助我们编辑页面" class="md-nav__link">
+      帮助我们编辑页面
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../intro/faq/" title="F.A.Q." class="md-nav__link">
+      F.A.Q.
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../intro/thanks/" title="捐赠" class="md-nav__link">
+      捐赠
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      初中部分
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        初中部分
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../primary/num/" title="数与整除" class="md-nav__link">
+      数与整除
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      代数
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        代数
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../algintro/" title="代数部分简介" class="md-nav__link">
+      代数部分简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../jihe/" title="集合" class="md-nav__link">
+      集合
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3">
+      函数基础
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        函数基础
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../func/fun/" title="基本概念" class="md-nav__link">
+      基本概念
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../func/efun/" title="常见初等函数" class="md-nav__link">
+      常见初等函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3-3" type="checkbox" id="nav-3-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3-3">
+      三角函数
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-3-3">
+        三角函数
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../func/trifun/base/" title="基本内容" class="md-nav__link">
+      基本内容
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../func/trifun/trieq/" title="三角方程与恒等式" class="md-nav__link">
+      三角方程与恒等式
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../func/trifun/ineq/" title="三角不等式" class="md-nav__link">
+      三角不等式
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../func/trifun/tris/" title="三角代换" class="md-nav__link">
+      三角代换
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../func/funi/" title="函数迭代" class="md-nav__link">
+      函数迭代
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../func/fune/" title="函数方程" class="md-nav__link">
+      函数方程
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+    
+    <label class="md-nav__link" for="nav-3-4">
+      数列
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-4">
+        数列
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../shuxueguinafa/" title="前置-数学归纳法" class="md-nav__link">
+      前置-数学归纳法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tongxianggongshi/" title="基本通项技术" class="md-nav__link">
+      基本通项技术
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tezhenggen/" title="特征根" class="md-nav__link">
+      特征根
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../raodongfa/" title="扰动法" class="md-nav__link">
+      扰动法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../chengtaofa/" title="成套法" class="md-nav__link">
+      成套法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../heshi/" title="和式技巧" class="md-nav__link">
+      和式技巧
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../shengchenghanshu/" title="生成函数" class="md-nav__link">
+      生成函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../shuliexingzhi/" title="数列的性质" class="md-nav__link">
+      数列的性质
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lisanweijifen/" title="离散微积分" class="md-nav__link">
+      离散微积分
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4-10" type="checkbox" id="nav-3-4-10">
+    
+    <label class="md-nav__link" for="nav-3-4-10">
+      超几何学
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-4-10">
+        超几何学
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../erxiangshixishu/" title="二项式系数" class="md-nav__link">
+      二项式系数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../chaojihejishu/" title="超几何级数" class="md-nav__link">
+      超几何级数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../gosper/" title="Gosper机械求和法" class="md-nav__link">
+      Gosper机械求和法
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4-11" type="checkbox" id="nav-3-4-11">
+    
+    <label class="md-nav__link" for="nav-3-4-11">
+      其他特殊数列
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-4-11">
+        其他特殊数列
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sitelinshu/" title="斯特林数" class="md-nav__link">
+      斯特林数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../oulashu/" title="欧拉数" class="md-nav__link">
+      欧拉数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tiaoheshu/" title="调和数" class="md-nav__link">
+      调和数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../katelanshu/" title="卡特兰数" class="md-nav__link">
+      卡特兰数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../wubianxingshu/" title="五边形数" class="md-nav__link">
+      五边形数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../bonulishu/" title="伯努利数" class="md-nav__link">
+      伯努利数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../feibonaqishu/" title="斐波那契数" class="md-nav__link">
+      斐波那契数
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
+    
+    <label class="md-nav__link" for="nav-3-5">
+      复数
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-5">
+        复数
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fushu/" title="基本内容" class="md-nav__link">
+      基本内容
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../oulagongshi/" title="欧拉公式" class="md-nav__link">
+      欧拉公式
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dimofudingli/" title="棣莫弗定理" class="md-nav__link">
+      棣莫弗定理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../danweifushu/" title="单位复数与单位根" class="md-nav__link">
+      单位复数与单位根
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6">
+    
+    <label class="md-nav__link" for="nav-3-6">
+      线性代数
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-6">
+        线性代数
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../xianxingdaishudejiheshizhi/" title="线性代数的几何实质" class="md-nav__link">
+      线性代数的几何实质
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../xiangliang/" title="向量" class="md-nav__link">
+      向量
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../duoxiangshi/" title="多项式" class="md-nav__link">
+      多项式
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6-4" type="checkbox" id="nav-3-6-4">
+    
+    <label class="md-nav__link" for="nav-3-6-4">
+      矩阵论
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-6-4">
+        矩阵论
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../gugu/" title="咕咕咕" class="md-nav__link">
+      咕咕咕
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6-5" type="checkbox" id="nav-3-6-5">
+    
+    <label class="md-nav__link" for="nav-3-6-5">
+      线性空间
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-6-5">
+        线性空间
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../gugu/" title="咕咕咕" class="md-nav__link">
+      咕咕咕
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7" type="checkbox" id="nav-3-7">
+    
+    <label class="md-nav__link" for="nav-3-7">
+      微积分
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-7">
+        微积分
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../gugu/" title="咕咕咕" class="md-nav__link">
+      咕咕咕
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-8" type="checkbox" id="nav-3-8" checked>
+    
+    <label class="md-nav__link" for="nav-3-8">
+      不等式
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-8">
+        不等式
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        均值不等式
+      </label>
+    
+    <a href="./" title="均值不等式" class="md-nav__link md-nav__link--active">
+      均值不等式
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    前置知识
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    概念
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    基本定义
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    证明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#am-gmam-gm" class="md-nav__link">
+    加权AM-GMAM-GM不等式
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    证明
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    方法
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    常规
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    系数配给与消分母、次数调整
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    常规方法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    次数调整
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    利用取等条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    待定系数
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    换元方法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    方程求解
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    取等条件的思考
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    局部不等式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" class="md-nav__link md-nav__link--active">
+            评论
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kexibudengshi/" title="柯西不等式" class="md-nav__link">
+      柯西不等式
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../paixubudengshi/" title="排序不等式" class="md-nav__link">
+      排序不等式
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../qiebixuefubudengshi/" title="切比雪夫不等式" class="md-nav__link">
+      切比雪夫不等式
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../heerdebudengshi/" title="赫尔德不等式" class="md-nav__link">
+      赫尔德不等式
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../abeierbudengshi/" title="阿贝尔不等式" class="md-nav__link">
+      阿贝尔不等式
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../shuerbudengshi/" title="舒尔不等式" class="md-nav__link">
+      舒尔不等式
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../qinshengbudengshi/" title="琴生不等式" class="md-nav__link">
+      琴生不等式
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../youchaobudengshi/" title="优超不等式" class="md-nav__link">
+      优超不等式
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../jububudengshi/" title="局部不等式" class="md-nav__link">
+      局部不等式
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lagelangrihengdengshi/" title="拉格朗日恒等式" class="md-nav__link">
+      拉格朗日恒等式
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lunhuanbudengshi/" title="轮换不等式" class="md-nav__link">
+      轮换不等式
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../guiyishi/" title="归一式" class="md-nav__link">
+      归一式
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../qicihua/" title="齐次化" class="md-nav__link">
+      齐次化
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../qiexianfa/" title="切线法" class="md-nav__link">
+      切线法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tiaozhengfa/" title="调整法" class="md-nav__link">
+      调整法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sanjiaodaihuan/" title="三角代换" class="md-nav__link">
+      三角代换
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../zengliangdaihuan/" title="增量代换" class="md-nav__link">
+      增量代换
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../peifangfayusos/" title="配方法与SOS" class="md-nav__link">
+      配方法与SOS
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-9" type="checkbox" id="nav-3-9">
+    
+    <label class="md-nav__link" for="nav-3-9">
+      抽象代数
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-9">
+        抽象代数
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../gugu/" title="咕咕咕" class="md-nav__link">
+      咕咕咕
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-10" type="checkbox" id="nav-3-10">
+    
+    <label class="md-nav__link" for="nav-3-10">
+      复变函数
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-10">
+        复变函数
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../gugu/" title="咕咕咕" class="md-nav__link">
+      咕咕咕
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      几何
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        几何
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../geointro/" title="几何部分简介" class="md-nav__link">
+      几何部分简介
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      数论
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        数论
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../numintro/" title="数论部分简介" class="md-nav__link">
+      数论部分简介
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      组合
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        组合
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../comintro/" title="组合部分简介" class="md-nav__link">
+      组合部分简介
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      杂项
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        杂项
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../heshi/" title="和式" class="md-nav__link">
+      和式
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pingjunzhi/" title="平均值" class="md-nav__link">
+      平均值
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../youlishumingtidaowulishumingti/" title="有理数命题到无理数命题" class="md-nav__link">
+      有理数命题到无理数命题
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    前置知识
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    概念
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    基本定义
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    证明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#am-gmam-gm" class="md-nav__link">
+    加权AM-GMAM-GM不等式
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    证明
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    方法
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    常规
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    系数配给与消分母、次数调整
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    常规方法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    次数调整
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    利用取等条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    待定系数
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    换元方法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    方程求解
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    取等条件的思考
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    局部不等式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" class="md-nav__link md-nav__link--active">
+            评论
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://vertex-mo.github.io/Wiki/edit-landing/?ref=/Wiki/junzhibudengshi.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>均值不等式</h1>
+                
+                <p>检索字：junzhibudengshi; Average inequality</p>
+<h2 id="_1">前置知识<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p><a href="../heshi/">和式</a> <a href="../pingjunzhi/">平均值</a></p>
+<h2 id="_2">概念<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="_3">基本定义<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>给定一组<strong>正实数</strong><span><span class="MathJax_Preview">\{a_n\}</span><script type="math/tex">\{a_n\}</script></span>。</p>
+<ul>
+<li>记<span><span class="MathJax_Preview">H_n=\dfrac{n}{\sum\dfrac1{a_j}}</span><script type="math/tex">H_n=\dfrac{n}{\sum\dfrac1{a_j}}</script></span>为这组数的<strong>调和平均值</strong>。</li>
+<li>记<span><span class="MathJax_Preview">G_n=(\prod a_j)^{1/n}</span><script type="math/tex">G_n=(\prod a_j)^{1/n}</script></span>为这组数的<strong>几何平均值</strong>。</li>
+<li>记<span><span class="MathJax_Preview">A_n=\dfrac1n\sum a_j</span><script type="math/tex">A_n=\dfrac1n\sum a_j</script></span>为这组数的<strong>算术平均值</strong>。</li>
+<li>记<span><span class="MathJax_Preview">Q_n=\sqrt{\dfrac1n\sum a_j^2}</span><script type="math/tex">Q_n=\sqrt{\dfrac1n\sum a_j^2}</script></span>为这组数的<strong>平方平均值</strong>。</li>
+</ul>
+<p>则有
+$$
+H_n\le G_n\le A_n\le Q_n
+$$
+上式称为<strong>均值不等式</strong>。当且仅当<span><span class="MathJax_Preview">a_1=...=a_n</span><script type="math/tex">a_1=...=a_n</script></span>时取等。</p>
+<p>对于<span><span class="MathJax_Preview">n=2,a_1\not=a_2</span><script type="math/tex">n=2,a_1\not=a_2</script></span>，我们称<span><span class="MathJax_Preview">\dfrac{a_1-a_2}{\ln a_1-\ln a_2}</span><script type="math/tex">\dfrac{a_1-a_2}{\ln a_1-\ln a_2}</script></span>为<span><span class="MathJax_Preview">a_1,a_2</span><script type="math/tex">a_1,a_2</script></span>的<strong>对数平均值</strong>。此时有<span><span class="MathJax_Preview">G_2&lt;\dfrac{a_1-a_2}{\ln a_1-\ln a_2}&lt;A_2</span><script type="math/tex">G_2<\dfrac{a_1-a_2}{\ln a_1-\ln a_2}<A_2</script></span>。</p>
+<h3 id="_4">证明<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>我们仅证明<span><span class="MathJax_Preview">G_n\le A_n</span><script type="math/tex">G_n\le A_n</script></span>，其余留作练习。</p>
+<p>采用<a href="../shuxueguinafa/">柯西归纳法</a>完成。</p>
+<p><span><span class="MathJax_Preview">n=2</span><script type="math/tex">n=2</script></span>时，不等式显然成立。</p>
+<p>简单归纳可以得到不等式对<span><span class="MathJax_Preview">n=2^k</span><script type="math/tex">n=2^k</script></span>成立，其中 k 为正整数。</p>
+<p>对于非2整数幂的正整数 n，任取<span><span class="MathJax_Preview">2^k&gt;n</span><script type="math/tex">2^k>n</script></span>，则由</p>
+<div>
+<div class="MathJax_Preview">
+\dfrac{a_1+...+a_n+\overbrace{G_n+...+G_n}^{2^m-n个}}{2^m}\ge(G_n^nG_n^{2^m-n})^{1/2^m}=G_n
+</div>
+<script type="math/tex; mode=display">
+\dfrac{a_1+...+a_n+\overbrace{G_n+...+G_n}^{2^m-n个}}{2^m}\ge(G_n^nG_n^{2^m-n})^{1/2^m}=G_n
+</script>
+</div>
+<p>得到<span><span class="MathJax_Preview">A_n\ge G_n</span><script type="math/tex">A_n\ge G_n</script></span>。故原不等式成立。</p>
+<h3 id="am-gmam-gm">加权<span><span class="MathJax_Preview">AM-GM</span><script type="math/tex">AM-GM</script></span>不等式<a class="headerlink" href="#am-gmam-gm" title="Permanent link">&para;</a></h3>
+<p>设 n 个和为1点正实数<span><span class="MathJax_Preview">\{x_n\}</span><script type="math/tex">\{x_n\}</script></span>，则有</p>
+<div>
+<div class="MathJax_Preview">
+\sum{a_jx_j\ge\prod a_j^{x_j}}
+</div>
+<script type="math/tex; mode=display">
+\sum{a_jx_j\ge\prod a_j^{x_j}}
+</script>
+</div>
+<h4 id="_5">证明<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<p>采用<a href="../shuxueguinafa/">数学归纳法</a>完成。</p>
+<p>对<span><span class="MathJax_Preview">n=2</span><script type="math/tex">n=2</script></span>与<span><span class="MathJax_Preview">x_1,x_2\in\textbf{Q}</span><script type="math/tex">x_1,x_2\in\textbf{Q}</script></span>，显然。</p>
+<p>若<span><span class="MathJax_Preview">x_1,x_2\in\textbf{R},x_1,x_2\not\in\textbf{Q}</span><script type="math/tex">x_1,x_2\in\textbf{R},x_1,x_2\not\in\textbf{Q}</script></span>，取有理序列<span><span class="MathJax_Preview">\{r_n\},\{s_n\}</span><script type="math/tex">\{r_n\},\{s_n\}</script></span>满足<span><span class="MathJax_Preview">r_n\rightarrow x_1,s_n\rightarrow x_2</span><script type="math/tex">r_n\rightarrow x_1,s_n\rightarrow x_2</script></span>且<span><span class="MathJax_Preview">r_n+s_n=1</span><script type="math/tex">r_n+s_n=1</script></span>，则</p>
+<div>
+<div class="MathJax_Preview">
+a_1r_n+a_2s_n\ge a_1^{r_n}a_2^{s_m}
+</div>
+<script type="math/tex; mode=display">
+a_1r_n+a_2s_n\ge a_1^{r_n}a_2^{s_m}
+</script>
+</div>
+<p>两边取极限即可。</p>
+<p>对于一般的<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>，考虑第一数学归纳法。将问题转化到<span><span class="MathJax_Preview">n-1</span><script type="math/tex">n-1</script></span>元。</p>
+<p>令正实数<span><span class="MathJax_Preview">b_{n-1}y_{n-1}=a_{n-1}x_{n-1}+a_nx_n</span><script type="math/tex">b_{n-1}y_{n-1}=a_{n-1}x_{n-1}+a_nx_n</script></span>，并对<span><span class="MathJax_Preview">x_1,...,x_{n-2},y_{n-1}</span><script type="math/tex">x_1,...,x_{n-2},y_{n-1}</script></span>与系数<span><span class="MathJax_Preview">a_1,...,a_{n-2},b_{n-1}</span><script type="math/tex">a_1,...,a_{n-2},b_{n-1}</script></span>，有归纳假设</p>
+<div>
+<div class="MathJax_Preview">
+a_1x_1+...+a_{n-2}x_{n-2}+b_{n-1}y_{n-1}\ge a_1^{x_1}...a_{n-2}^{x_{n-2}}b_{n-1}^{y_{n-1}}
+</div>
+<script type="math/tex; mode=display">
+a_1x_1+...+a_{n-2}x_{n-2}+b_{n-1}y_{n-1}\ge a_1^{x_1}...a_{n-2}^{x_{n-2}}b_{n-1}^{y_{n-1}}
+</script>
+</div>
+<p>将 b 与 y 代入化简，再对右边最后一因式套用<span><span class="MathJax_Preview">n=2</span><script type="math/tex">n=2</script></span>的归纳假设来放缩，即证。</p>
+<p>参考：<a href="../youlishumingtidaowulishumingti/">有理数命题到无理数命题</a></p>
+<h2 id="_6">方法<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p>Note：对于<strong>最基础的几个例题</strong>，选择二元不等式会使解答过于显然，但刚开始就选择 n 元不等式会显得有些突兀，前面的几个例题自然地就选择了三元不等式。而对于三元不等式<strong>最基础的思路</strong>自然是构造局部不等式，再“三式相加”。</p>
+<p>为了方便，叙述时仅给出三式中一式，另外两式即其轮换。比如</p>
+<p>“<span><span class="MathJax_Preview">x+y&gt;z</span><script type="math/tex">x+y>z</script></span>，三式相加即证”表示<span><span class="MathJax_Preview">x+y&gt;z</span><script type="math/tex">x+y>z</script></span>,<span><span class="MathJax_Preview">y+z&gt;x</span><script type="math/tex">y+z>x</script></span>,<span><span class="MathJax_Preview">z+x&gt;y</span><script type="math/tex">z+x>y</script></span>三式相加。</p>
+<p>但有些不等式并不是轮换的，此时本文会明确写出三个式子，比如例4。</p>
+<h3 id="_7">常规<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p><strong>例1</strong> 设 x,y,z 为正实数，求证：</p>
+<div>
+<div class="MathJax_Preview">
+x^4+y^4+z^4\ge\dfrac12(x^3y+y^3z+z^3x+x^3z+z^3y+y^3x)\ge x^2y^2+z^2x^2\ge x^2yz+xy^2z+xyz^2
+</div>
+<script type="math/tex; mode=display">
+x^4+y^4+z^4\ge\dfrac12(x^3y+y^3z+z^3x+x^3z+z^3y+y^3x)\ge x^2y^2+z^2x^2\ge x^2yz+xy^2z+xyz^2
+</script>
+</div>
+<p><strong>证明</strong></p>
+<ul>
+<li>第一个不等号，由于<span><span class="MathJax_Preview">\dfrac12(x^4+y^4)-\dfrac12(x^3y+xy^3)=\dfrac12(x-y)^2(x^2+xy+y^2)\ge0</span><script type="math/tex">\dfrac12(x^4+y^4)-\dfrac12(x^3y+xy^3)=\dfrac12(x-y)^2(x^2+xy+y^2)\ge0</script></span>，故<span><span class="MathJax_Preview">\dfrac12(x^4+y^4)\ge\dfrac12(x^3y+xy^3)</span><script type="math/tex">\dfrac12(x^4+y^4)\ge\dfrac12(x^3y+xy^3)</script></span>，对<span><span class="MathJax_Preview">(x,y,z)</span><script type="math/tex">(x,y,z)</script></span>轮换还有类似两式，三式相加即证。</li>
+<li>第二个不等号，由均值不等式，<span><span class="MathJax_Preview">\dfrac12(x^3y+xy^3)\ge x^2y^2</span><script type="math/tex">\dfrac12(x^3y+xy^3)\ge x^2y^2</script></span>，类似地三式相加即证。</li>
+<li>第三个不等号，由均值不等式，<span><span class="MathJax_Preview">\dfrac12(x^2y^2+x^2y^2)\ge x^2yz</span><script type="math/tex">\dfrac12(x^2y^2+x^2y^2)\ge x^2yz</script></span>，类似地三式相加即证。</li>
+</ul>
+<h3 id="_8">系数配给与消分母、次数调整<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>均值不等式可以“<strong>放和为积</strong>”，因而用均值不等式来调整次数和消去分母，是很自然的操作。</p>
+<h4 id="_9">常规方法<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
+<p><strong>例2</strong> </p>
+<p>对<span><span class="MathJax_Preview">x,y,z\in\textbf{R}</span><script type="math/tex">x,y,z\in\textbf{R}</script></span>且<span><span class="MathJax_Preview">x,y,z\ge0</span><script type="math/tex">x,y,z\ge0</script></span>,满足<span><span class="MathJax_Preview">2x+3y+5z=6</span><script type="math/tex">2x+3y+5z=6</script></span>，求<span><span class="MathJax_Preview">x^2yz</span><script type="math/tex">x^2yz</script></span>的最大值。  </p>
+<p><strong>解答</strong></p>
+<p>考虑利用均值不等式来将和（条件<span><span class="MathJax_Preview">2x+3y+5z</span><script type="math/tex">2x+3y+5z</script></span>）放缩为积形式（要求的<span><span class="MathJax_Preview">x^2yz</span><script type="math/tex">x^2yz</script></span>）。注意到<span><span class="MathJax_Preview">x^2yz</span><script type="math/tex">x^2yz</script></span>中 x 的次数为2，将其拆分为<span><span class="MathJax_Preview">x*x*y*z</span><script type="math/tex">x*x*y*z</script></span>，而和<span><span class="MathJax_Preview">2x+3y+5z</span><script type="math/tex">2x+3y+5z</script></span>自然相应地拆分为<span><span class="MathJax_Preview">x+x+3y+5z</span><script type="math/tex">x+x+3y+5z</script></span>。于是下面的过程就十分显然了。</p>
+<p><span><span class="MathJax_Preview">x^2yz=\dfrac1{15}(x*x*3y*5z)\le\dfrac1{15}(\dfrac{x+x+3y+5z}4)^4=\dfrac{27}{80}</span><script type="math/tex">x^2yz=\dfrac1{15}(x*x*3y*5z)\le\dfrac1{15}(\dfrac{x+x+3y+5z}4)^4=\dfrac{27}{80}</script></span>。取等当且仅当<span><span class="MathJax_Preview">x=1.5,y=0.5,z=0.3</span><script type="math/tex">x=1.5,y=0.5,z=0.3</script></span>。</p>
+<h4 id="_10">次数调整<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
+<p>在例三之前，再次明确一下配给常数的目的。</p>
+<p>一是在均值不等式中，我们猜出了取等条件。<strong>为了让均值不等式的取等条件正确，需要配系数</strong>。譬如我们要对<span><span class="MathJax_Preview">x+y</span><script type="math/tex">x+y</script></span>套用均值不等式，而取等条件是<span><span class="MathJax_Preview">x=1,y=2</span><script type="math/tex">x=1,y=2</script></span>，我们需要配给常数2给x，即<span><span class="MathJax_Preview">2x+y</span><script type="math/tex">2x+y</script></span>。这样套用均值不等式后，取等条件即为<span><span class="MathJax_Preview">2x=y</span><script type="math/tex">2x=y</script></span>。恰满足<span><span class="MathJax_Preview">x=1,y=2</span><script type="math/tex">x=1,y=2</script></span>时取等的要求。</p>
+<p>二是调整次数。譬如对<span><span class="MathJax_Preview">x^5+1</span><script type="math/tex">x^5+1</script></span>，要将其降至<span><span class="MathJax_Preview">x^2</span><script type="math/tex">x^2</script></span>。我们配给常数<span><span class="MathJax_Preview">ax^5+b</span><script type="math/tex">ax^5+b</script></span>后，若单纯地依然使用二元均值不等式，只是改变了根号底下的系数，毫无用处。</p>
+<p>事实上，对此进行常数配给，<strong>是要用 a 个<span><span class="MathJax_Preview">x^5</span><script type="math/tex">x^5</script></span>与 b 个 1，套用<span><span class="MathJax_Preview">a+b</span><script type="math/tex">a+b</script></span>元均值不等式</strong>。由于5和2是互素的，我们首先把<span><span class="MathJax_Preview">x^5</span><script type="math/tex">x^5</script></span>升幂为2的倍数，由于<span><span class="MathJax_Preview">\gcd(5,2)=10</span><script type="math/tex">\gcd(5,2)=10</script></span>，比较显然的思路是令<span><span class="MathJax_Preview">a=2</span><script type="math/tex">a=2</script></span>。而又有<span><span class="MathJax_Preview">10/2=5</span><script type="math/tex">10/2=5</script></span>，这提示需要用5元均值。因而<span><span class="MathJax_Preview">b=5-a=2</span><script type="math/tex">b=5-a=2</script></span>。</p>
+<p>其实在简单的次数调整中，完全可以直接写下若干个相同的项，例如例4。但有时<strong>项数过多</strong>，甚至要套用20元均值（例如<strong>例3的第五小题</strong>），<strong>因而我们不得不用乘法来代替相同的项连加</strong>，看起来就像是系数一样。这就导致了系数配给的歧义。希望这不会对你造成理解上的困难。</p>
+<p>类似地，我们下文在配给系数的过程中，若提到“降次”“升幂”“调整次数”等，并写出<span><span class="MathJax_Preview">5\dfrac{x^4}{y^3}+3y^5</span><script type="math/tex">5\dfrac{x^4}{y^3}+3y^5</script></span>这样的式子，默认是指5个<span><span class="MathJax_Preview">\dfrac{x^4}{y^3}</span><script type="math/tex">\dfrac{x^4}{y^3}</script></span>和3个<span><span class="MathJax_Preview">y^5</span><script type="math/tex">y^5</script></span>来套用8元均值。而若提到“为了满足取等条件”等，则是目的一，是单纯地配系数。</p>
+<p>有时会同时出现两种目的的系数配给，见例题5。</p>
+<p><strong>例3</strong> 设 x,y,z 为正实数：</p>
+<p>(1) 求证：<span><span class="MathJax_Preview">\dfrac{x^2}y+\dfrac{y^2}z+\dfrac{z^2}x\ge x+y+z</span><script type="math/tex">\dfrac{x^2}y+\dfrac{y^2}z+\dfrac{z^2}x\ge x+y+z</script></span><br />
+(2) 求证：<span><span class="MathJax_Preview">\dfrac{x^3}{yz}+\dfrac{y^3}{zx}+\dfrac{z^3}{xy}\ge x+y+z</span><script type="math/tex">\dfrac{x^3}{yz}+\dfrac{y^3}{zx}+\dfrac{z^3}{xy}\ge x+y+z</script></span><br />
+(3) <span><span class="MathJax_Preview">x^2+y^2+z^2=3</span><script type="math/tex">x^2+y^2+z^2=3</script></span>，求证：<span><span class="MathJax_Preview">x^3+y^3+z^3\ge3,x^{1.5}+y^{1.5}+z^{1.5}\le3</span><script type="math/tex">x^3+y^3+z^3\ge3,x^{1.5}+y^{1.5}+z^{1.5}\le3</script></span>，并思考<span><span class="MathJax_Preview">x^{1.9}+y^{1.9}+z^{1.9}</span><script type="math/tex">x^{1.9}+y^{1.9}+z^{1.9}</script></span>与3的大小关系。<br />
+(4) 求证：<span><span class="MathJax_Preview">x^3+y^3+z^3\ge x^2y+y^2z+z^2x\ge3xyz</span><script type="math/tex">x^3+y^3+z^3\ge x^2y+y^2z+z^2x\ge3xyz</script></span>。
+(5) <span><span class="MathJax_Preview">x^5+y^5+z^5=3</span><script type="math/tex">x^5+y^5+z^5=3</script></span>，求证：<span><span class="MathJax_Preview">\dfrac{x^4}{y^3}+\dfrac{y^4}{z^3}+\dfrac{z^4}{x^3}\ge3</span><script type="math/tex">\dfrac{x^4}{y^3}+\dfrac{y^4}{z^3}+\dfrac{z^4}{x^3}\ge3</script></span></p>
+<p><strong>证明</strong></p>
+<p>(1) 由<span><span class="MathJax_Preview">\dfrac{x^2}y+y\ge2x</span><script type="math/tex">\dfrac{x^2}y+y\ge2x</script></span>三式相加即证。</p>
+<p>(2) 注意到左侧的分子皆为三次式，而右侧为一次式，考虑利用三元均值不等式将三次降为一次并消去分母。由<span><span class="MathJax_Preview">\dfrac{x^3}{yz}+y+z\ge3x</span><script type="math/tex">\dfrac{x^3}{yz}+y+z\ge3x</script></span>三式相加即证。</p>
+<p>(3) 为了利用到条件，考虑使用均值不等式将三次式降为二次。不难想到<span><span class="MathJax_Preview">2=3*2/3</span><script type="math/tex">2=3*2/3</script></span>，用均值不等式<span><span class="MathJax_Preview">x^3+x^3+1\ge3x^2</span><script type="math/tex">x^3+x^3+1\ge3x^2</script></span>，三式相加即证第一问。对于第二问，<span><span class="MathJax_Preview">1.5=3/2</span><script type="math/tex">1.5=3/2</script></span>，用均值不等式<span><span class="MathJax_Preview">x^3+1\ge2x^{1.5}</span><script type="math/tex">x^3+1\ge2x^{1.5}</script></span>即可。对于第三问，考虑配常数 k 并用均值不等式<span><span class="MathJax_Preview">kx^2+1\ge(k+1)x^{\dfrac{2k}{k+1}}</span><script type="math/tex">kx^2+1\ge(k+1)x^{\dfrac{2k}{k+1}}</script></span>，由于 x 的次数为 1.9，取<span><span class="MathJax_Preview">k=19</span><script type="math/tex">k=19</script></span>再三式相加即可。</p>
+<p>(4) 第一个不等号，利用三元均值<span><span class="MathJax_Preview">x^2y+y^2z+z^2x\ge3xyz</span><script type="math/tex">x^2y+y^2z+z^2x\ge3xyz</script></span>三式相加即可。第二个不等号，利用<span><span class="MathJax_Preview">x^3+y^3+z^3\ge3x^2y</span><script type="math/tex">x^3+y^3+z^3\ge3x^2y</script></span>三式相加即可。此问几乎不需要任何系数，不难想到这样的解答。</p>
+<p>(5) 这是本题的核心所在。</p>
+<p>答案依然简简单单一行，<span><span class="MathJax_Preview">10*\dfrac{x^4}{y^3}+6x^5y^5+3x^{10}+1\ge20x^5</span><script type="math/tex">10*\dfrac{x^4}{y^3}+6x^5y^5+3x^{10}+1\ge20x^5</script></span>。这是左侧套用20元均值不等式的结果。三式相加即证。</p>
+<p>但这些系数和次数可能是很繁杂的（加上“可能”二字，是因为有《代数不等式》这种存在），几乎是拼凑出来的。能够猜出系数的人大有人在，但我们需要有明确的经验而不是“感觉”，前者使得我们比赛时不会因为路上踩到了烂泥而影响到比赛状态。</p>
+<p>下面考虑一下，如何配给出本题的系数。</p>
+<p>第一个显然的思路，是用<span><span class="MathJax_Preview">\dfrac{x^4}{y^3}+y^3\ge2x^2</span><script type="math/tex">\dfrac{x^4}{y^3}+y^3\ge2x^2</script></span>。然而这样根本无法用到已知条件。我们需要有次数为5的项，并且不含有交叉项。</p>
+<p>为了用到已知条件，考虑用<span><span class="MathJax_Preview">\dfrac{x^4}{y^3}+y^5</span><script type="math/tex">\dfrac{x^4}{y^3}+y^5</script></span>进行恰当的常数配给来达到目的。为了调整y的次数（注意，此处配给常数的目的是调整次数）消除交叉项，配给常数<span><span class="MathJax_Preview">5\dfrac{x^4}{y^3}+3y^5</span><script type="math/tex">5\dfrac{x^4}{y^3}+3y^5</script></span>套用8元均值，不等式右侧为<span><span class="MathJax_Preview">8x^{20/8}</span><script type="math/tex">8x^{20/8}</script></span>。但发现<span><span class="MathJax_Preview">x^{20/8}</span><script type="math/tex">x^{20/8}</script></span>的次数十分奇怪，因此我们考虑在左边再加几个<span><span class="MathJax_Preview">x^5</span><script type="math/tex">x^5</script></span>来使得不等式右侧的次数达到5。</p>
+<p>但不难证明，左侧无论配给多少个<span><span class="MathJax_Preview">x^5</span><script type="math/tex">x^5</script></span>，右侧x的次数始终小于5。因此这个思路亦不可行，俗称“放过了”。</p>
+<p>显然不管采用何种方法，<span><span class="MathJax_Preview">\dfrac{x^4}{y^3}+\colorbox{black}{\ }</span><script type="math/tex">\dfrac{x^4}{y^3}+\colorbox{black}{\ }</script></span>来套用均值不等式时，总是要求<span><span class="MathJax_Preview">\colorbox{black}{\ }</span><script type="math/tex">\colorbox{black}{\ }</script></span>中的内容能够用到已知条件。根据上一个思路的经验，框中的内容又必须次数高于5，即任何配给形如<span><span class="MathJax_Preview">x^5</span><script type="math/tex">x^5</script></span>的方法都不可行。</p>
+<p>不难想到把已知条件平方来获取更高的幂。<span><span class="MathJax_Preview">x^{10}+y^{10}+z^{10}+2x^5y^5+2x^5z^5+2y^5z^5=9</span><script type="math/tex">x^{10}+y^{10}+z^{10}+2x^5y^5+2x^5z^5+2y^5z^5=9</script></span>。</p>
+<p>我们对下面的三式进行配给：</p>
+<p><span><span class="MathJax_Preview">\dfrac{x^4}{y^3}+\colorbox{black}{\ }</span><script type="math/tex">\dfrac{x^4}{y^3}+\colorbox{black}{\ }</script></span></p>
+<p><span><span class="MathJax_Preview">\dfrac{y^4}{z^3}+\colorbox{black}{\ }</span><script type="math/tex">\dfrac{y^4}{z^3}+\colorbox{black}{\ }</script></span></p>
+<p><span><span class="MathJax_Preview">\dfrac{z^4}{x^3}+\colorbox{black}{\ }</span><script type="math/tex">\dfrac{z^4}{x^3}+\colorbox{black}{\ }</script></span></p>
+<p>若用<span><span class="MathJax_Preview">x^5y^5</span><script type="math/tex">x^5y^5</script></span>来配第二、第三式，会出现交叉项消不干净的窘境。尝试配给第一式，显然容易通过配给常数来消去y。类似地也可选择<span><span class="MathJax_Preview">y^5z^5</span><script type="math/tex">y^5z^5</script></span>和<span><span class="MathJax_Preview">z^5x^5</span><script type="math/tex">z^5x^5</script></span>分别配二三两式。同理，把<span><span class="MathJax_Preview">x^{10},y^{10},z^{10}</span><script type="math/tex">x^{10},y^{10},z^{10}</script></span>也可分别配给一、二、三式（其他顺序的不合理性，请读者自行验证）。</p>
+<p><span><span class="MathJax_Preview">\dfrac{x^4}{y^3}+x^5y^5+x^{10}+\colorbox{black}{\ }</span><script type="math/tex">\dfrac{x^4}{y^3}+x^5y^5+x^{10}+\colorbox{black}{\ }</script></span> </p>
+<p><span><span class="MathJax_Preview">\dfrac{y^4}{z^3}+y^5z^5+y^{10}+\colorbox{black}{\ }</span><script type="math/tex">\dfrac{y^4}{z^3}+y^5z^5+y^{10}+\colorbox{black}{\ }</script></span> </p>
+<p><span><span class="MathJax_Preview">\dfrac{z^4}{x^3}+z^5x^5+z^{10}+\colorbox{black}{\ }</span><script type="math/tex">\dfrac{z^4}{x^3}+z^5x^5+z^{10}+\colorbox{black}{\ }</script></span> </p>
+<p>下面可以考虑配系数。为了<strong>调整次数</strong>来消去y，每个式子前两项的系数应当为<span><span class="MathJax_Preview">5:3</span><script type="math/tex">5:3</script></span>，同时为了三式相加后能用到已知条件<span><span class="MathJax_Preview">x^{10}+y^{10}+z^{10}+2x^5y^5+2x^5z^5+2y^5z^5=9</span><script type="math/tex">x^{10}+y^{10}+z^{10}+2x^5y^5+2x^5z^5+2y^5z^5=9</script></span>，后两项系数应当为<span><span class="MathJax_Preview">2:1</span><script type="math/tex">2:1</script></span>。因而可以配给如下：</p>
+<p><span><span class="MathJax_Preview">10\dfrac{x^4}{y^3}+6x^5y^5+3x^{10}\ge x^{100/19}</span><script type="math/tex">10\dfrac{x^4}{y^3}+6x^5y^5+3x^{10}\ge x^{100/19}</script></span> </p>
+<p><span><span class="MathJax_Preview">10\dfrac{y^4}{z^3}+6y^5z^5+3y^{10}\ge y^{100/19}</span><script type="math/tex">10\dfrac{y^4}{z^3}+6y^5z^5+3y^{10}\ge y^{100/19}</script></span> </p>
+<p><span><span class="MathJax_Preview">10\dfrac{z^4}{x^3}+6z^5x^5+3z^{10}\ge z^{100/19}</span><script type="math/tex">10\dfrac{z^4}{x^3}+6z^5x^5+3z^{10}\ge z^{100/19}</script></span> </p>
+<p>此时已经接近成功了。我们在左侧再添加一个1，来使得右侧可以恰好为5次方。</p>
+<p><span><span class="MathJax_Preview">10\dfrac{x^4}{y^3}+6x^5y^5+3x^{10}+1\ge x^5</span><script type="math/tex">10\dfrac{x^4}{y^3}+6x^5y^5+3x^{10}+1\ge x^5</script></span></p>
+<p>这就得到了最终的答案。</p>
+<p><strong>例4</strong> <span><span class="MathJax_Preview">a,b,c&gt;0,a^2+b^2+c^2=14</span><script type="math/tex">a,b,c>0,a^2+b^2+c^2=14</script></span>，求证：<span><span class="MathJax_Preview">a^5+\dfrac18b^5+\dfrac1{27}c^5\ge14</span><script type="math/tex">a^5+\dfrac18b^5+\dfrac1{27}c^5\ge14</script></span>。</p>
+<p><strong>证明</strong></p>
+<p>考虑对<span><span class="MathJax_Preview">a^5,\dfrac18b^5,\dfrac1{27}c^5</span><script type="math/tex">a^5,\dfrac18b^5,\dfrac1{27}c^5</script></span>调整次数。根据前面几题的经验，不难想到对<span><span class="MathJax_Preview">2a^5+3*1</span><script type="math/tex">2a^5+3*1</script></span>套用5元均值不等式来降到2次。有<span><span class="MathJax_Preview">2a^5+3*1\ge5a^2</span><script type="math/tex">2a^5+3*1\ge5a^2</script></span>。类似的可以用<span><span class="MathJax_Preview">2*\dfrac18b^5+3t</span><script type="math/tex">2*\dfrac18b^5+3t</script></span>来降b的次数。其中 t 为常数。为了三式相加后能够凑出已知条件<span><span class="MathJax_Preview">a^2+b^2+c^2=14</span><script type="math/tex">a^2+b^2+c^2=14</script></span>，需要不等式右侧<span><span class="MathJax_Preview">a^2,b^2,c^2</span><script type="math/tex">a^2,b^2,c^2</script></span>的系数相同。而<span><span class="MathJax_Preview">a^2</span><script type="math/tex">a^2</script></span>的系数为5，故取<span><span class="MathJax_Preview">t=64^{1/3}=4</span><script type="math/tex">t=64^{1/3}=4</script></span>。从而对<span><span class="MathJax_Preview">2*\dfrac18b^5+3*4</span><script type="math/tex">2*\dfrac18b^5+3*4</script></span>套用5元均值后，有<span><span class="MathJax_Preview">2*\dfrac18b^5+3*4\ge5b^2</span><script type="math/tex">2*\dfrac18b^5+3*4\ge5b^2</script></span>。同理<span><span class="MathJax_Preview">2*\dfrac1{27}c^5+3*9\ge5c^2</span><script type="math/tex">2*\dfrac1{27}c^5+3*9\ge5c^2</script></span>。三式相加即证。</p>
+<h4 id="_11">利用取等条件<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
+<p>在例5之前，明确一点：以下系数的配给是为了符合取等条件，因此为目的一。</p>
+<p>此后限于篇幅不会再反复提醒这些，读者应当已经可以有明确的判断。</p>
+<p><strong>例5</strong> 设<span><span class="MathJax_Preview">x,y,z\in\textbf{R}^*,x+y+z=1</span><script type="math/tex">x,y,z\in\textbf{R}^*,x+y+z=1</script></span>，求<span><span class="MathJax_Preview">\dfrac{x^4}{y(1-y^2)}+\dfrac{y^4}{z(1-z^2)}+\dfrac{z^4}{x(1-x^2)}</span><script type="math/tex">\dfrac{x^4}{y(1-y^2)}+\dfrac{y^4}{z(1-z^2)}+\dfrac{z^4}{x(1-x^2)}</script></span>的最小值。</p>
+<p><strong>解答</strong></p>
+<p>由于条件和式子都是轮换的，猜想取等条件<span><span class="MathJax_Preview">x=y=z=\dfrac13</span><script type="math/tex">x=y=z=\dfrac13</script></span>。</p>
+<p><em>注：确实有那些轮换的不等式，它们的取等条件极其不对称。但在日常做题，至少在高联中，遇到这些题目的几率极小。我们将在<a href="../lunhuanbudengshi/">轮换不等式</a>中进一步讨论。</em></p>
+<p>如果直接消分母<span><span class="MathJax_Preview">\dfrac{x^4}{y(1-y^2)}+y(1-y^2)</span><script type="math/tex">\dfrac{x^4}{y(1-y^2)}+y(1-y^2)</script></span>，三式相加后无法处理<span><span class="MathJax_Preview">y(1-y^2)</span><script type="math/tex">y(1-y^2)</script></span>的轮换和。故我们考虑把<span><span class="MathJax_Preview">y(1-y^2)</span><script type="math/tex">y(1-y^2)</script></span>拆成<span><span class="MathJax_Preview">y(1+y)(1-y)</span><script type="math/tex">y(1+y)(1-y)</script></span>，并用<span><span class="MathJax_Preview">\dfrac{x^4}{y(1-y)^2}+y+(1+y)+(1-y)</span><script type="math/tex">\dfrac{x^4}{y(1-y)^2}+y+(1+y)+(1-y)</script></span>消去分母。而此时发现不等式右侧将会是<span><span class="MathJax_Preview">(x^4)^{1/4}=x</span><script type="math/tex">(x^4)^{1/4}=x</script></span>，恰好满足条件的次数。</p>
+<p>但观察一下取等条件，发现<span><span class="MathJax_Preview">x=y=z=\dfrac13</span><script type="math/tex">x=y=z=\dfrac13</script></span>时，有<span><span class="MathJax_Preview">\dfrac{x^4}{y(1-y)^2}:y:(1+y):(1-y)=\dfrac1{24}:\dfrac13:\dfrac43:\dfrac23</span><script type="math/tex">\dfrac{x^4}{y(1-y)^2}:y:(1+y):(1-y)=\dfrac1{24}:\dfrac13:\dfrac43:\dfrac23</script></span>。但均值不等式的取等条件是四项全相等。故我们考虑配系数。</p>
+<p>有<span><span class="MathJax_Preview">\dfrac{x^4}{y(1-y)^2}+\dfrac18y+\dfrac1{32}(1+y)+\dfrac1{16}(1-y)\ge4(\dfrac1{2^{12}}x^4)^{1/4}=\dfrac12x</span><script type="math/tex">\dfrac{x^4}{y(1-y)^2}+\dfrac18y+\dfrac1{32}(1+y)+\dfrac1{16}(1-y)\ge4(\dfrac1{2^{12}}x^4)^{1/4}=\dfrac12x</script></span>。</p>
+<p>三式相加即证。</p>
+<h4 id="_12">待定系数<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h4>
+<p><strong>例6</strong> 对不全为0的实数<span><span class="MathJax_Preview">x,y,z,w\in\textbf{R}</span><script type="math/tex">x,y,z,w\in\textbf{R}</script></span>，求<span><span class="MathJax_Preview">\dfrac{xy+2yz+zw}{x^2+y^2+z^2+w^2}</span><script type="math/tex">\dfrac{xy+2yz+zw}{x^2+y^2+z^2+w^2}</script></span>的最大值。</p>
+<p><strong>解答</strong></p>
+<p>考虑利用均值不等式将分子放缩成分母的形式。设<span><span class="MathJax_Preview">a,b,c&gt;0</span><script type="math/tex">a,b,c>0</script></span>，则：</p>
+<div>
+<div class="MathJax_Preview">
+xy\le\dfrac12(ax^2+\dfrac{y^2}a),2yz\le by^2+\dfrac{z^2}b,zw\le\dfrac12(\dfrac{z^2}c+cw^2)
+</div>
+<script type="math/tex; mode=display">
+xy\le\dfrac12(ax^2+\dfrac{y^2}a),2yz\le by^2+\dfrac{z^2}b,zw\le\dfrac12(\dfrac{z^2}c+cw^2)
+</script>
+</div>
+<p>三式相加左边为分子。为了使右边与分母成比例，考虑到式子关于<span><span class="MathJax_Preview">(y,z)</span><script type="math/tex">(y,z)</script></span>对称，应当有<span><span class="MathJax_Preview">b=\dfrac1b</span><script type="math/tex">b=\dfrac1b</script></span>即<span><span class="MathJax_Preview">b=1</span><script type="math/tex">b=1</script></span>。又式子关于<span><span class="MathJax_Preview">(xy,zw)</span><script type="math/tex">(xy,zw)</script></span>对称，应当有<span><span class="MathJax_Preview">a=c</span><script type="math/tex">a=c</script></span>。则三式相加，不等式右侧得</p>
+<div>
+<div class="MathJax_Preview">
+\dfrac a2x^2+(\dfrac1{2a}+1)(y^2+z^2)+\dfrac a2w^2
+</div>
+<script type="math/tex; mode=display">
+\dfrac a2x^2+(\dfrac1{2a}+1)(y^2+z^2)+\dfrac a2w^2
+</script>
+</div>
+<p>由于这应当与分母成比例，故有<span><span class="MathJax_Preview">\dfrac a2=\dfrac1{2a}+1</span><script type="math/tex">\dfrac a2=\dfrac1{2a}+1</script></span>，即<span><span class="MathJax_Preview">a=1+\sqrt2</span><script type="math/tex">a=1+\sqrt2</script></span>。代入得</p>
+<div>
+<div class="MathJax_Preview">
+xy+2yz+zw\le\dfrac{1+\sqrt2}2(x^2+y^2+z^2+w^2)
+</div>
+<script type="math/tex; mode=display">
+xy+2yz+zw\le\dfrac{1+\sqrt2}2(x^2+y^2+z^2+w^2)
+</script>
+</div>
+<p>故<span><span class="MathJax_Preview">\dfrac{xy+2yz+zw}{x^2+y^2+z^2+w^2}\le\dfrac{1+\sqrt2}2</span><script type="math/tex">\dfrac{xy+2yz+zw}{x^2+y^2+z^2+w^2}\le\dfrac{1+\sqrt2}2</script></span>，当且仅当<span><span class="MathJax_Preview">x=w=1,y=z=1+\sqrt2</span><script type="math/tex">x=w=1,y=z=1+\sqrt2</script></span>时取等。</p>
+<h3 id="_13">换元方法<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<p><strong>例7</strong> <span><span class="MathJax_Preview">a,b,c\in\textbf{R}^*</span><script type="math/tex">a,b,c\in\textbf{R}^*</script></span>，求<span><span class="MathJax_Preview">\dfrac{a+3c}{a+2b+c}+\dfrac{4b}{a+b+2c}-\dfrac{8c}{a+b+3c}</span><script type="math/tex">\dfrac{a+3c}{a+2b+c}+\dfrac{4b}{a+b+2c}-\dfrac{8c}{a+b+3c}</script></span>的最小值。</p>
+<p><strong>证明</strong></p>
+<p>考虑到分母的复杂，选择换元。令<span><span class="MathJax_Preview">x=a+2b+c,y=a+b+2c,z=a+b+3c</span><script type="math/tex">x=a+2b+c,y=a+b+2c,z=a+b+3c</script></span>，则解出<span><span class="MathJax_Preview">a=-x+5y+3z,b=x-2y+z,c=-y+z</span><script type="math/tex">a=-x+5y+3z,b=x-2y+z,c=-y+z</script></span>，故</p>
+<div>
+<div class="MathJax_Preview">
+\begin{array}
+.LHS&amp;=&amp;\dfrac{-x+2y}x+\dfrac{4(x-2y+z)}y-\dfrac{8(z-y)}z\\
+&amp;=&amp;-17+\dfrac{2y}x+\dfrac{4x}y+\dfrac{4z}y+\dfrac{8y}z\\
+&amp;\ge&amp;-17+2\sqrt{2*4}+2\sqrt{4*8}=-17+12\sqrt{2}
+\end{array}
+</div>
+<script type="math/tex; mode=display">
+\begin{array}
+.LHS&=&\dfrac{-x+2y}x+\dfrac{4(x-2y+z)}y-\dfrac{8(z-y)}z\\
+&=&-17+\dfrac{2y}x+\dfrac{4x}y+\dfrac{4z}y+\dfrac{8y}z\\
+&\ge&-17+2\sqrt{2*4}+2\sqrt{4*8}=-17+12\sqrt{2}
+\end{array}
+</script>
+</div>
+<p>需要注意的是，在第二行，不可以将后四项一并放缩，这会导致取等条件的错误。</p>
+<h3 id="_14">方程求解<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<p><strong>例8</strong> 设<span><span class="MathJax_Preview">x_1,x_2,x_3,x_4\in\textbf{R}^*</span><script type="math/tex">x_1,x_2,x_3,x_4\in\textbf{R}^*</script></span>，若<span><span class="MathJax_Preview">\sum\dfrac1{x_j}=5-\dfrac1{\prod x_j}</span><script type="math/tex">\sum\dfrac1{x_j}=5-\dfrac1{\prod x_j}</script></span>，且<span><span class="MathJax_Preview">\sum x_j=4</span><script type="math/tex">\sum x_j=4</script></span>，求<span><span class="MathJax_Preview">x_1,x_2,x_3,x_4</span><script type="math/tex">x_1,x_2,x_3,x_4</script></span>的值。</p>
+<p><strong>解答</strong></p>
+<p>这些方程数目和未知数数目严重不匹配的特殊方程，一般可以因式分解，或处于某种不等关系的临界点。</p>
+<p>此题明显不是可以因式分解的。又注意到<span><span class="MathJax_Preview">x_1,x_2,x_3,x_4</span><script type="math/tex">x_1,x_2,x_3,x_4</script></span>及其倒数数的和与积的同时出现，不难想到均值不等式的取等条件。</p>
+<p>分析后发现，<span><span class="MathJax_Preview">4=\sum x_j\ge4(\prod x_j)^{1/4}</span><script type="math/tex">4=\sum x_j\ge4(\prod x_j)^{1/4}</script></span>，即<span><span class="MathJax_Preview">\prod x_j\le1</span><script type="math/tex">\prod x_j\le1</script></span>。又<span><span class="MathJax_Preview">5=\sum\dfrac1{x_j}+\dfrac1{\prod x_j}\ge5\dfrac1{((\prod x_j)^2)^{1/5}}</span><script type="math/tex">5=\sum\dfrac1{x_j}+\dfrac1{\prod x_j}\ge5\dfrac1{((\prod x_j)^2)^{1/5}}</script></span>，即<span><span class="MathJax_Preview">\prod x_j\ge1</span><script type="math/tex">\prod x_j\ge1</script></span>。故有<span><span class="MathJax_Preview">\prod x_j=1</span><script type="math/tex">\prod x_j=1</script></span>。由均值不等式的取等条件，有<span><span class="MathJax_Preview">x_1=x_2=x_3=x_4=1</span><script type="math/tex">x_1=x_2=x_3=x_4=1</script></span>。</p>
+<h3 id="_15">取等条件的思考<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<p>取等条件通常暗示了题目的解法。比如几个项全相等，暗示我们使用均值不等式等基本不等式；而大小差异极端，则暗示了<a href="../tiaozhengfa/">调整法 - 磨光变换</a>等特殊做法。</p>
+<h3 id="_16">局部不等式<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<p><strong>例9</strong> <span><span class="MathJax_Preview">a,b,c\in\textbf{R}^*,abc=8</span><script type="math/tex">a,b,c\in\textbf{R}^*,abc=8</script></span>，求证<span><span class="MathJax_Preview">\dfrac{a^2}{\sqrt{(1+b^3)(1+c^3)}}+\dfrac{b^2}{\sqrt{(1+c^3)(1+a^3)}}+\dfrac{c^2}{\sqrt{(1+a^3)(1+b^3)}}\ge\dfrac43</span><script type="math/tex">\dfrac{a^2}{\sqrt{(1+b^3)(1+c^3)}}+\dfrac{b^2}{\sqrt{(1+c^3)(1+a^3)}}+\dfrac{c^2}{\sqrt{(1+a^3)(1+b^3)}}\ge\dfrac43</script></span>。</p>
+<p><strong>证明</strong></p>
+<p>此题为创知路竞赛书的一道经典题目。原书中对此题的讲解已经非常优美，故此处引用原文：</p>
+<p><img alt="img" src="../1.jpg" /></p>
+                
+                  
+                
+                
+              
+              
+                
+
+
+  <h2 id="__comments">评论</h2>
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = "https://vertex-mo.github.io/Wiki/Wiki/junzhibudengshi/";
+      this.page.identifier =
+        "/Wiki/junzhibudengshi/";
+    };
+    (function() {
+      var d = document, s = d.createElement("script");
+      s.src = "//VertexMO-Wiki.disqus.com/embed.js";
+      s.setAttribute("data-timestamp", +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../gugu/" title="咕咕咕" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  上一页
+                </span>
+                咕咕咕
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../kexibudengshi/" title="柯西不等式" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  下一页
+                </span>
+                柯西不等式
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020 VertexMO Team
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.c33a9706.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.1",url:{base:"../.."}})</script>
+      
+        <script src="../../_static/js/extra.js?v=16"></script>
+      
+        <script src="https://cdnjs.loli.net/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>
