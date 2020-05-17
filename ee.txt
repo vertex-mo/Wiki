@@ -1,0 +1,4 @@
+mkdocs build --clean
+git push -u origin master -f
+mkdocs gh-deploy
+mkdocs serve -v

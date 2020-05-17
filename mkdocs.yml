@@ -1,0 +1,182 @@
+# Project Information
+site_name: VertexMO Wiki
+site_description: 
+site_author: 
+site_url: https://vertex-mo.github.io/Wiki
+strict: true
+
+# Repository
+repo_name: 'Wiki'
+repo_url: 'https://github.com/vertex-mo/Wiki'
+edit_uri: 'https://vertex-mo.github.io/Wiki/edit-landing/?ref='
+
+# Copyright
+copyright: 'Copyright &copy; 2020 VertexMO Team'
+google_analytics:
+  - 'UA-124485594-1'
+  - 'auto'
+
+# Contents
+nav:
+  - 简介:
+    - Getting Started: index.md
+    - 文本编辑指南: intro/latex.md
+    - 关于本项目: intro/about.md
+    - 帮助我们编辑页面: intro/htc.md
+    - F.A.Q.: intro/faq.md
+    - 捐赠: intro/thanks.md
+  - 初中部分:
+    - 数与整除: primary/num.md
+  - 代数:
+    - 代数部分简介: Wiki/algintro.md
+    - 集合: Wiki/jihe.md
+    - 函数基础:
+        - 基本概念: Wiki/func/fun.md
+        - 常见初等函数: Wiki/func/efun.md
+        - 三角函数:
+            - 基本内容: Wiki/func/trifun/base.md
+            - 三角方程与恒等式: Wiki/func/trifun/trieq.md
+            - 三角不等式: Wiki/func/trifun/ineq.md
+            - 三角代换: Wiki/func/trifun/tris.md
+        - 函数迭代: Wiki/func/funi.md
+        - 函数方程: Wiki/func/fune.md
+    - 数列:
+        - 前置-数学归纳法: Wiki/shuxueguinafa.md
+        - 基本通项技术: Wiki/tongxianggongshi.md
+        - 特征根: Wiki/tezhenggen.md
+        - 扰动法: Wiki/raodongfa.md
+        - 成套法: Wiki/chengtaofa.md
+        - 和式技巧: Wiki/heshi.md
+        - 生成函数: Wiki/shengchenghanshu.md
+        - 数列的性质: Wiki/shuliexingzhi.md
+        - 离散微积分: Wiki/lisanweijifen.md
+        - 超几何学:
+            - 二项式系数: Wiki/erxiangshixishu.md
+            - 超几何级数: Wiki/chaojihejishu.md
+            - Gosper机械求和法: Wiki/gosper.md
+        - 其他特殊数列:
+            - 斯特林数: Wiki/sitelinshu.md
+            - 欧拉数: Wiki/oulashu.md
+            - 调和数: Wiki/tiaoheshu.md
+            - 卡特兰数: Wiki/katelanshu.md
+            - 五边形数: Wiki/wubianxingshu.md
+            - 伯努利数: Wiki/bonulishu.md
+            - 斐波那契数: Wiki/feibonaqishu.md
+    - 复数:
+        - 基本内容: Wiki/fushu.md
+        - 欧拉公式: Wiki/oulagongshi.md
+        - 棣莫弗定理: Wiki/dimofudingli.md
+        - 单位复数与单位根: Wiki/danweifushu.md
+    - 线性代数:
+        - 线性代数的几何实质: Wiki/xianxingdaishudejiheshizhi.md
+        - 向量: Wiki/xiangliang.md
+        - 多项式: Wiki/duoxiangshi.md
+        - 矩阵论:
+            - 咕咕咕: Wiki/gugu.md
+        - 线性空间:
+            - 咕咕咕: Wiki/gugu.md
+    - 微积分:
+        - 咕咕咕: Wiki/gugu.md
+    - 不等式:
+        - 均值不等式: Wiki/junzhibudengshi.md
+        - 柯西不等式: Wiki/kexibudengshi.md
+        - 排序不等式: Wiki/paixubudengshi.md
+        - 切比雪夫不等式: Wiki/qiebixuefubudengshi.md
+        - 赫尔德不等式: Wiki/heerdebudengshi.md
+        - 阿贝尔不等式: Wiki/abeierbudengshi.md
+        - 舒尔不等式: Wiki/shuerbudengshi.md
+        - 琴生不等式: Wiki/qinshengbudengshi.md
+        - 优超不等式: Wiki/youchaobudengshi.md
+        - 局部不等式: Wiki/jububudengshi.md
+        - 拉格朗日恒等式: Wiki/lagelangrihengdengshi.md
+        - 轮换不等式: Wiki/lunhuanbudengshi.md
+        - 归一式: Wiki/guiyishi.md
+        - 齐次化: Wiki/qicihua.md
+        - 切线法: Wiki/qiexianfa.md
+        - 调整法: Wiki/tiaozhengfa.md
+        - 三角代换: Wiki/sanjiaodaihuan.md
+        - 增量代换: Wiki/zengliangdaihuan.md
+        - 配方法与SOS: Wiki/peifangfayusos.md
+    - 抽象代数: 
+        - 咕咕咕: Wiki/gugu.md
+    - 复变函数: 
+        - 咕咕咕: Wiki/gugu.md
+  - 几何:
+    - 几何部分简介: Wiki/geointro.md
+  - 数论:
+    - 数论部分简介: Wiki/numintro.md
+  - 组合:
+    - 组合部分简介: Wiki/comintro.md
+  - 杂项:
+    - 和式: Wiki/heshi.md
+    - 平均值: Wiki/pingjunzhi.md
+    - 有理数命题到无理数命题: Wiki/youlishumingtidaowulishumingti.md
+
+# Theme
+theme:
+  name: 'material'
+  language: 'zh'
+  palette:
+    primary: 'white'
+    accent: 'red'
+  include_search_page: false
+  search_index_only: true
+  favicon: 'favicon.ico'
+
+  logo:
+    icon: 'school'
+  feature:
+    tabs: true
+  font:
+    text: 'Fira Sans'
+    code: 'Fira Mono'
+
+# Customization
+extra:
+  search:
+    language: 'jp'
+  disqus: 'VertexMO-Wiki'
+  copyright: '<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a> 和 <a href="https://github.com/zTrix/sata-license">SATA</a>'
+  pagetime: 'on'
+  manifest: 'manifest.webmanifest'
+  githash: ''
+
+extra_javascript:
+  - '_static/js/extra.js?v=16'
+  - 'https://cdnjs.loli.net/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
+
+
+extra_css:
+  - '_static/css/extra.css?v=12'
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+      linenums: true
+  - def_list
+  - footnotes
+  - meta
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.progressbar
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: math
+          class: arithmatex
+          format: !!python/name:pymdownx.arithmatex.fence_mathjax_format
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
