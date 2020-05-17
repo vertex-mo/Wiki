@@ -1972,11 +1972,16 @@
 <p><a href="../heshi/">和式</a> <a href="../jiduanyuanli/">极端原理</a></p>
 <h2 id="_3">概念<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <h3 id="_4">基本定义<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<p>设非严格单调递增数列<span><span class="MathJax_Preview">\{a_n\}</span><script type="math/tex">\{a_n\}</script></span>与<span><span class="MathJax_Preview">\{b_n\}</span><script type="math/tex">\{b_n\}</script></span>，而<span><span class="MathJax_Preview">\{i_n\}</span><script type="math/tex">\{i_n\}</script></span>为<span><span class="MathJax_Preview">1,2,..,n</span><script type="math/tex">1,2,..,n</script></span>的任一排列。则有：
-$$
+<p>设非严格单调递增数列<span><span class="MathJax_Preview">\{a_n\}</span><script type="math/tex">\{a_n\}</script></span>与<span><span class="MathJax_Preview">\{b_n\}</span><script type="math/tex">\{b_n\}</script></span>，而<span><span class="MathJax_Preview">\{i_n\}</span><script type="math/tex">\{i_n\}</script></span>为<span><span class="MathJax_Preview">1,2,..,n</span><script type="math/tex">1,2,..,n</script></span>的任一排列。则有：</p>
+<div>
+<div class="MathJax_Preview">
 \sum a_jb_j\ge\sum a_jb_{i_j}\ge\sum a_jb_{n-j+1}
-$$
-上式记作<strong>排序不等式</strong>。即“顺序和≥乱序和≥逆序和”。当且仅当<span><span class="MathJax_Preview">a_1=...=a_n</span><script type="math/tex">a_1=...=a_n</script></span>或<span><span class="MathJax_Preview">b_1=...=b_n</span><script type="math/tex">b_1=...=b_n</script></span>时取等。</p>
+</div>
+<script type="math/tex; mode=display">
+\sum a_jb_j\ge\sum a_jb_{i_j}\ge\sum a_jb_{n-j+1}
+</script>
+</div>
+<p>上式记作<strong>排序不等式</strong>。即“顺序和≥乱序和≥逆序和”。当且仅当<span><span class="MathJax_Preview">a_1=...=a_n</span><script type="math/tex">a_1=...=a_n</script></span>或<span><span class="MathJax_Preview">b_1=...=b_n</span><script type="math/tex">b_1=...=b_n</script></span>时取等。</p>
 <h3 id="_5">证明<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p><strong>方法1</strong></p>
 <p>证明采用<a href="../tiaozhengfa/">调整法</a>。</p>
@@ -1986,15 +1991,24 @@ $$
 <p>假设取到最大值 M 时，不满足<span><span class="MathJax_Preview">b_{i_1}\le...\le b_{i_n}</span><script type="math/tex">b_{i_1}\le...\le b_{i_n}</script></span>，则<span><span class="MathJax_Preview">\exists b_{i_k}&gt;b_{i_{k+1}}</span><script type="math/tex">\exists b_{i_k}>b_{i_{k+1}}</script></span>。此时交换它们，必得到更优解，与 M 为最大值矛盾。综上不等式得证。</p>
 <p><strong>方法2</strong></p>
 <p>采用<a href="../abeierbianhuan/">阿贝尔变换</a>。</p>
-<p>有
-$$
+<p>有</p>
+<div>
+<div class="MathJax_Preview">
 \begin{matrix}
-\sum a_jb_{i_j}&amp;=&amp;\sum_{1\le j&lt; n}((a_j-a_{j+1})\sum_{1\le k\le j}b_{i_k})+a_n\sum b_{i_j}\
-&amp;\le&amp;\sum_{1\le j&lt; n}((a_j-a_{j+1})\sum_{1\le k\le j}b_k)+a_n\sum b_j\
+\sum a_jb_{i_j}&amp;=&amp;\sum_{1\le j&lt; n}((a_j-a_{j+1})\sum_{1\le k\le j}b_{i_k})+a_n\sum b_{i_j}\\
+&amp;\le&amp;\sum_{1\le j&lt; n}((a_j-a_{j+1})\sum_{1\le k\le j}b_k)+a_n\sum b_j\\
 &amp;=&amp;\sum a_jb_j
 \end{matrix}
-$$
-第二个不等号类似。</p>
+</div>
+<script type="math/tex; mode=display">
+\begin{matrix}
+\sum a_jb_{i_j}&=&\sum_{1\le j< n}((a_j-a_{j+1})\sum_{1\le k\le j}b_{i_k})+a_n\sum b_{i_j}\\
+&\le&\sum_{1\le j< n}((a_j-a_{j+1})\sum_{1\le k\le j}b_k)+a_n\sum b_j\\
+&=&\sum a_jb_j
+\end{matrix}
+</script>
+</div>
+<p>第二个不等号类似。</p>
 <h3 id="_6">切比雪夫不等式<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <p>见<a href="../qiebixuefubudengshi/">切比雪夫不等式</a>。</p>
 <h2 id="_7">方法<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
@@ -2008,20 +2022,31 @@ $$
 <p><strong>例2</strong> 证明<span><span class="MathJax_Preview">\sum\limits_{cyc}\dfrac a{b+c}\ge\dfrac32</span><script type="math/tex">\sum\limits_{cyc}\dfrac a{b+c}\ge\dfrac32</script></span>。</p>
 <p><strong>证明</strong></p>
 <p>由于左侧完全对称，不妨设<span><span class="MathJax_Preview">a\ge b\ge c</span><script type="math/tex">a\ge b\ge c</script></span>，则<span><span class="MathJax_Preview">\dfrac1{b+c}\ge\dfrac1{c+a}\ge\dfrac1{a+b}</span><script type="math/tex">\dfrac1{b+c}\ge\dfrac1{c+a}\ge\dfrac1{a+b}</script></span>。</p>
-<p>由排序不等式，显然有
-$$
+<p>由排序不等式，显然有</p>
+<div>
+<div class="MathJax_Preview">
 \begin{matrix}
-\dfrac a{b+c}+\dfrac b{c+a}+\dfrac c{a+b}\ge\dfrac b{b+c}+\dfrac c{c+a}+\dfrac a{a+b}\
+\dfrac a{b+c}+\dfrac b{c+a}+\dfrac c{a+b}\ge\dfrac b{b+c}+\dfrac c{c+a}+\dfrac a{a+b}\\
 \dfrac a{b+c}+\dfrac b{c+a}+\dfrac c{a+b}\ge\dfrac c{b+c}+\dfrac a{c+a}+\dfrac b{a+b}
 \end{matrix}
-$$
-相加即证。</p>
+</div>
+<script type="math/tex; mode=display">
+\begin{matrix}
+\dfrac a{b+c}+\dfrac b{c+a}+\dfrac c{a+b}\ge\dfrac b{b+c}+\dfrac c{c+a}+\dfrac a{a+b}\\
+\dfrac a{b+c}+\dfrac b{c+a}+\dfrac c{a+b}\ge\dfrac c{b+c}+\dfrac a{c+a}+\dfrac b{a+b}
+\end{matrix}
+</script>
+</div>
+<p>相加即证。</p>
 <p>注：两个不等式右侧的排列选择<span><span class="MathJax_Preview">b,c,a</span><script type="math/tex">b,c,a</script></span>与<span><span class="MathJax_Preview">c,a,b</span><script type="math/tex">c,a,b</script></span>，恰好能够与分母抵消。</p>
 <h3 id="_9">排列处理<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
-<p>试证明：对于前2007个正整数，不存在四个排列<span><span class="MathJax_Preview">a,b,c,d</span><script type="math/tex">a,b,c,d</script></span>,使<span><span class="MathJax_Preview">a_1b_1+...+a_{2007}b_{2007}=2(c_1d_1+...+c_{2007}d_{2007})</span><script type="math/tex">a_1b_1+...+a_{2007}b_{2007}=2(c_1d_1+...+c_{2007}d_{2007})</script></span>。</p>
+<p><strong>例3</strong> 试证明：对于前2007个正整数，不存在四个排列<span><span class="MathJax_Preview">a,b,c,d</span><script type="math/tex">a,b,c,d</script></span>,使<span><span class="MathJax_Preview">a_1b_1+...+a_{2007}b_{2007}=2(c_1d_1+...+c_{2007}d_{2007})</span><script type="math/tex">a_1b_1+...+a_{2007}b_{2007}=2(c_1d_1+...+c_{2007}d_{2007})</script></span>。</p>
 <p><strong>证明</strong></p>
 <p>正难则反，我们考虑如何构造这四个排列，从而得出矛盾。</p>
-<p>前2007个正整数，设它们的两个排列对应相乘再相加的结果的取值范围在<span><span class="MathJax_Preview">[M,N]</span><script type="math/tex">[M,N]</script></span>内。则我们的任务是从<span><span class="MathJax_Preview">[M,N]</span><script type="math/tex">[M,N]</script></span>中找到两个数，</p>
+<p>前2007个正整数，设它们的两个排列对应相乘再相加的结果的取值范围在<span><span class="MathJax_Preview">[M,N]</span><script type="math/tex">[M,N]</script></span>内。则我们的任务是从<span><span class="MathJax_Preview">[M,N]</span><script type="math/tex">[M,N]</script></span>中找到两个数，其中一个数为另一数的两倍，并构造两组排列，每组两个排列对应相乘再相加的结果分别等于这两个数。</p>
+<p>首先求出<span><span class="MathJax_Preview">M</span><script type="math/tex">M</script></span>和<span><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span>。利用排序不等式，显然有<span><span class="MathJax_Preview">M=1349397084,N=2696779140</span><script type="math/tex">M=1349397084,N=2696779140</script></span>。</p>
+<p>注意到<span><span class="MathJax_Preview">2M&gt;N</span><script type="math/tex">2M>N</script></span>，因此不存在这样的两个数。</p>
+<p>故得证。</p>
 <h3 id="_10">解题利器：齐次化<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
 <h3 id="_11">零和权重<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
                 
