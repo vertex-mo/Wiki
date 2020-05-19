@@ -1582,6 +1582,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../budengshiqiangruolv/" title="不等式强弱律" class="md-nav__link">
+      不等式强弱律
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2009,6 +2021,7 @@
 </script>
 </div>
 <p>第二个不等号类似。</p>
+<p><em>阿贝尔变化，本质即离散微积分中的分步求和法，它可在许多和式问题中大显身手。一些可用排序不等式处理的问题，使用阿贝尔变换甚至会更加方便。</em></p>
 <h3 id="_6">切比雪夫不等式<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <p>见<a href="../qiebixuefubudengshi/">切比雪夫不等式</a>。</p>
 <h2 id="_7">方法<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
@@ -2048,7 +2061,35 @@
 <p>注意到<span><span class="MathJax_Preview">2M&gt;N</span><script type="math/tex">2M>N</script></span>，因此不存在这样的两个数。</p>
 <p>故得证。</p>
 <h3 id="_10">解题利器：齐次化<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p><a href="../qicihua/">齐次化</a></p>
+<p>对于不那么强，且变量对称性较好的不等式，有一种思路几乎是万能的，即暴力展开并齐次化后使用均值/排序/<a href="../shuerbudengshi/">舒尔</a>不等式。</p>
+<p>譬如：</p>
+<p><strong>例4</strong> 若<span><span class="MathJax_Preview">a+b+c=1</span><script type="math/tex">a+b+c=1</script></span>试证明：<span><span class="MathJax_Preview">27(a^3+b^3+c^3)\ge6(a^2+b^2+c^2)+1</span><script type="math/tex">27(a^3+b^3+c^3)\ge6(a^2+b^2+c^2)+1</script></span>。</p>
+<p><strong>证明</strong></p>
+<p>考虑齐次化，<span><span class="MathJax_Preview">RHS=6(a^2+b^2+c^2)(a+b+c)+(a+b+c)^3</span><script type="math/tex">RHS=6(a^2+b^2+c^2)(a+b+c)+(a+b+c)^3</script></span>，则原不等式等价于：
+$$
+27\sum a^3\ge6(\sum a<sup>3+\sum_{cyc}a</sup>2b+\sum_{cyc}ab^2)+\sum a<sup>3+3\sum_{cyc}a</sup>2b+3\sum_{cyc}ab^2+6abc
+$$
+即
+$$
+20\sum a<sup>3\ge9(\sum_{cyc}(a</sup>2b+ab^2))+6bac
+$$
+显然有
+$$
+9\sum a<sup>3\ge9\sum_{cyc}a</sup>2b,9\sum a<sup>3\ge9\sum_{cyc}ab</sup>2,2\sum a^3\ge6abc
+$$
+相加即证。</p>
+<p>齐次化有时也不那么好做，譬如变量对称性并不够好，或者不等式很强。</p>
+<p>具体可见<a href="../budengshiqiangruolv/">不等式强弱律</a>。</p>
 <h3 id="_11">零和权重<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<p>这是一种特殊的权重，它将可以同时出现正权值和负权值。</p>
+<p>它于题中出现时，即形如<span><span class="MathJax_Preview">\sum x_j=0</span><script type="math/tex">\sum x_j=0</script></span>的条件。它有一个显然但重要的性质，即正项和与负项和的绝对值相等。</p>
+<p>有时为了能够处理出正项和与负项和的具体值，题中还会给出类似<span><span class="MathJax_Preview">\sum|x_j|=1</span><script type="math/tex">\sum|x_j|=1</script></span>的条件。联立两式，则可解出正项和<span><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>与负项和<span><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span>。</p>
+<p><strong>例5</strong> 设<span><span class="MathJax_Preview">\{x_n\},\{a_n\}\in\textbf{R}</span><script type="math/tex">\{x_n\},\{a_n\}\in\textbf{R}</script></span>，且<span><span class="MathJax_Preview">\sum x_j=0,\sum|x_j|=1,\{a_n\}</span><script type="math/tex">\sum x_j=0,\sum|x_j|=1,\{a_n\}</script></span>非严格单调递减。求证：<span><span class="MathJax_Preview">|\sum x_ja_j|\le\dfrac12(a_1-a_n)</span><script type="math/tex">|\sum x_ja_j|\le\dfrac12(a_1-a_n)</script></span>。</p>
+<p><strong>证明</strong></p>
+<p>设<span><span class="MathJax_Preview">\{x_n\}</span><script type="math/tex">\{x_n\}</script></span>中正的部分为<span><span class="MathJax_Preview">x_{j_1},...,x_{j_s}</span><script type="math/tex">x_{j_1},...,x_{j_s}</script></span>之和为<span><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>，负的部分<span><span class="MathJax_Preview">x_{k_1},...,x_{k_t}</span><script type="math/tex">x_{k_1},...,x_{k_t}</script></span>之和的绝对值为<span><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span>，则<span><span class="MathJax_Preview">A-B=0,A+B=1</span><script type="math/tex">A-B=0,A+B=1</script></span>。得到<span><span class="MathJax_Preview">A=B=0.5</span><script type="math/tex">A=B=0.5</script></span>。</p>
+<p>不妨设<span><span class="MathJax_Preview">\sum x_ja_j\ge0</span><script type="math/tex">\sum x_ja_j\ge0</script></span>，则由排序不等式，<span><span class="MathJax_Preview">\sum x_ja_j\le a_1x_{j_1}+...+a_sx_{j_s}+a_{s+1}x_{k_1}+...+a_nx_{k_t}</span><script type="math/tex">\sum x_ja_j\le a_1x_{j_1}+...+a_sx_{j_s}+a_{s+1}x_{k_1}+...+a_nx_{k_t}</script></span></p>
+<p>而<span><span class="MathJax_Preview">RHS\le a_1A+a_nB=\dfrac12(a_1-a_n)</span><script type="math/tex">RHS\le a_1A+a_nB=\dfrac12(a_1-a_n)</script></span>，故命题得证。</p>
                 
                   
                 
