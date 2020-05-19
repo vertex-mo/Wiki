@@ -2066,19 +2066,34 @@
 <p>譬如：</p>
 <p><strong>例4</strong> 若<span><span class="MathJax_Preview">a+b+c=1</span><script type="math/tex">a+b+c=1</script></span>试证明：<span><span class="MathJax_Preview">27(a^3+b^3+c^3)\ge6(a^2+b^2+c^2)+1</span><script type="math/tex">27(a^3+b^3+c^3)\ge6(a^2+b^2+c^2)+1</script></span>。</p>
 <p><strong>证明</strong></p>
-<p>考虑齐次化，<span><span class="MathJax_Preview">RHS=6(a^2+b^2+c^2)(a+b+c)+(a+b+c)^3</span><script type="math/tex">RHS=6(a^2+b^2+c^2)(a+b+c)+(a+b+c)^3</script></span>，则原不等式等价于：
-$$
-27\sum a^3\ge6(\sum a<sup>3+\sum_{cyc}a</sup>2b+\sum_{cyc}ab^2)+\sum a<sup>3+3\sum_{cyc}a</sup>2b+3\sum_{cyc}ab^2+6abc
-$$
-即
-$$
-20\sum a<sup>3\ge9(\sum_{cyc}(a</sup>2b+ab^2))+6bac
-$$
-显然有
-$$
-9\sum a<sup>3\ge9\sum_{cyc}a</sup>2b,9\sum a<sup>3\ge9\sum_{cyc}ab</sup>2,2\sum a^3\ge6abc
-$$
-相加即证。</p>
+<p>考虑齐次化，<span><span class="MathJax_Preview">RHS=6(a^2+b^2+c^2)(a+b+c)+(a+b+c)^3</span><script type="math/tex">RHS=6(a^2+b^2+c^2)(a+b+c)+(a+b+c)^3</script></span>，则原不等式等价于：</p>
+<div>
+<div class="MathJax_Preview">
+27\sum a^3\ge6(\sum a^3+\sum_{cyc}a^2b+\sum_{cyc}ab^2)+\sum a^3+3\sum_{cyc}a^2b+3\sum_{cyc}ab^2+6abc
+</div>
+<script type="math/tex; mode=display">
+27\sum a^3\ge6(\sum a^3+\sum_{cyc}a^2b+\sum_{cyc}ab^2)+\sum a^3+3\sum_{cyc}a^2b+3\sum_{cyc}ab^2+6abc
+</script>
+</div>
+<p>即</p>
+<div>
+<div class="MathJax_Preview">
+20\sum a^3\ge9(\sum_{cyc}(a^2b+ab^2))+6bac
+</div>
+<script type="math/tex; mode=display">
+20\sum a^3\ge9(\sum_{cyc}(a^2b+ab^2))+6bac
+</script>
+</div>
+<p>显然有</p>
+<div>
+<div class="MathJax_Preview">
+9\sum a^3\ge9\sum_{cyc}a^2b,9\sum a^3\ge9\sum_{cyc}ab^2,2\sum a^3\ge6abc
+</div>
+<script type="math/tex; mode=display">
+9\sum a^3\ge9\sum_{cyc}a^2b,9\sum a^3\ge9\sum_{cyc}ab^2,2\sum a^3\ge6abc
+</script>
+</div>
+<p>相加即证。</p>
 <p>齐次化有时也不那么好做，譬如变量对称性并不够好，或者不等式很强。</p>
 <p>具体可见<a href="../budengshiqiangruolv/">不等式强弱律</a>。</p>
 <h3 id="_11">零和权重<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
