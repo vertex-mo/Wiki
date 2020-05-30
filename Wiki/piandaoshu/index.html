@@ -7,6 +7,14 @@
   <head>
     
       <meta charset="utf-8">
+      <meta http-equiv="x-dns-prefetch-control" content="on">
+      <link rel="dns-prefetch" href="//fonts.googleapis.com">
+      <link rel="dns-prefetch" href="//oi-wiki.org">
+      <link rel="dns-prefetch" href="//search.oi-wiki.org">
+      <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+      <link rel="dns-prefetch" href="//api.github.com">
+      <link rel="dns-prefetch" href="//cdn-for-oi-wiki.billchn.com">
+      <link rel="dns-prefetch" href="//www.google-analytics.com">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
@@ -34,7 +42,7 @@
         <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
       
       <link rel="shortcut icon" href="../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.4.2">
     
     
       
@@ -42,7 +50,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.30686662.css">
       
         <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
       
@@ -53,18 +61,18 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr.86422ebf.js"></script>
+      <script src="../../assets/javascripts/modernizr.27508f0e.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,400i,700%7CFira+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,400i,700|Fira+Mono&display=fallback">
         <style>body,input{font-family:"Fira Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Fira Mono","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
-      <link rel="manifest" type="application/manifest+json" href="../../manifest.webmanifest" crossorigin="use-credentials">
+      <link rel="manifest" href="../../manifest.webmanifest">
     
     
       <link rel="stylesheet" href="../../_static/css/extra.css?v=12">
@@ -121,7 +129,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://vertex-mo.github.io/Wiki" title="VertexMO Wiki" aria-label="VertexMO Wiki" class="md-header-nav__button md-logo">
+        <a href="https://vertex-mo.github.io/Wiki" title="VertexMO Wiki" class="md-header-nav__button md-logo">
           
             <i class="md-icon">school</i>
           
@@ -152,7 +160,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="__search"></label>
       <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
         &#xE5CD;
@@ -1733,27 +1741,39 @@
                 
                   
                 
-                
               
               
-                
+                 
+ 
+ 
+<hr><blockquote class="page-copyright">
+  <span><i class="md-icon">build</i>本页面最近更新：</span><span class="facts_modified"></span>，<a class="edit_history">更新历史</a><br>
+  <span><i class="md-icon">edit</i>发现错误？想一起完善？ <a href="https://vertex-mo.github.io/Wiki/edit-landing/?ref=/Wiki/piandaoshu.md" title="编辑此页" class="page_edit_url">在 GitHub 上编辑此页！</a></span><br>
+  <span><i class="md-icon">people</i>本页面贡献者：</span><span class="page_contributors">OI-wiki</span><br>
+  <span><i class="md-icon">copyright</i>本页面的全部内容在 <strong><a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a> 和 <a href="https://github.com/zTrix/sata-license">SATA</a></strong> 协议之条款下提供，附加条款亦可能应用</span>
+</blockquote>
 
 
-  <h2 id="__comments">评论</h2>
-  <div id="disqus_thread"></div>
-  <script>
-    var disqus_config = function () {
-      this.page.url = "https://vertex-mo.github.io/Wiki/Wiki/piandaoshu/";
-      this.page.identifier =
-        "/Wiki/piandaoshu/";
-    };
-    (function() {
-      var d = document, s = d.createElement("script");
-      s.src = "//VertexMO-Wiki.disqus.com/embed.js";
-      s.setAttribute("data-timestamp", +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
-  </script>
+<h2 id="__comments" data-no-instant>评论</h2>
+<form id="gitalk-form" onsubmit="return!1" data-no-instant>
+<div id="gitalk-container" data-no-instant>
+</div>
+</form>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/OI-wiki/gitalk@master/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/gh/OI-wiki/gitalk@master/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    id: 'Piandaoshu',
+    owner: 'OI-wiki',
+    repo: 'gitment',
+    admin: ['Ir1d', 'cjsoft', 'TrisolarisHD', 'Xeonacid', 'sshwy'],
+    clientID: 'd6a911c8fba0194626d4',
+    clientSecret: '867ec7e13cc99b420bd147cbb62d5cfec271ba81',
+    distractionFreeMode: false,
+    pagerDirection: 'first'
+  })
+  gitalk.render('gitalk-container')
+</script>
 
               
             </article>
@@ -1762,6 +1782,12 @@
       </main>
       
         
+<script>function scrollFunction(){20<document.body.scrollTop||20<document.documentElement.scrollTop?document.getElementById("myBtn").style.display="block":document.getElementById("myBtn").style.display="none"}function topFunction(){document.body.scrollTop=0,document.documentElement.scrollTop=0}window.onscroll=function(){scrollFunction()}</script>
+<button onclick="topFunction()" id="myBtn" class="data-tip-left" data-tip="回到顶部">
+  <svg class="Zi Zi--BackToTop data-tip-left" data-tip="回到顶部" fill="currentColor" viewBox="0 0 24 24" width="24" height="24">
+    <path d="M16.036 19.59a1 1 0 0 1-.997.995H9.032a.996.996 0 0 1-.997-.996v-7.005H5.03c-1.1 0-1.36-.633-.578-1.416L11.33 4.29a1.003 1.003 0 0 1 1.412 0l6.878 6.88c.782.78.523 1.415-.58 1.415h-3.004v7.005z"></path>
+  </svg>
+</button>
 <footer class="md-footer">
   
   <div class="md-footer-meta md-typeset">
@@ -1773,38 +1799,44 @@
           </div>
         
         powered by
-        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        <a href="https://www.mkdocs.org">MkDocs</a>
         and
-        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+        <a href="https://squidfunk.github.io/mkdocs-material/">
           Material for MkDocs</a>
+        <div id="miitbeian"></div>
       </div>
       
+      <span style="float:right" class="build_date_utc"><a href="https://github.com/24OI/OI-wiki">最近更新：b2ac3a9, 2020-05-30</a></span>
+      <script>
+        /* miitbeian */
+        if (window.location.hostname == "oi-wiki.com") {
+          document.getElementById("miitbeian").innerHTML = `<a href="http://beian.miit.gov.cn/">黑ICP备19005132号-2</a>`;
+        }
+        /* Easter Egg */
+        console.log(`%c OI Wiki %c b2ac3a9 %c`,"background:#35495e ; padding: 1px; border-radius: 3px 0 0 3px;  color: #fff","background:#41b883 ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff","background:transparent");
+        console.log('少年，恭喜你囍提彩蛋，我们在做一些 OI 相关的有趣的事情，如果您对此感兴趣，欢迎访问 https://join-us.oi-wiki.org');
+      </script>
+      
+    </div>
+    <div class="sponsor" style="text-align: center;color: white;vertical-align: middle;">
+      Supported by <span />
+      <a href="/intro/hulu/">
+        <img async src="https://i.loli.net/2019/11/06/b8nUtshEGNBQg7R.png" style="
+          vertical-align: -12px;
+          width: 125px;
+          margin-left:5px;
+        ">
+      </a>
     </div>
   </div>
 </footer>
       
     </div>
     
-      <script src="../../assets/javascripts/application.c33a9706.js"></script>
-      
-        
-        
-          
-          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
-          
-            
-              
-              
-            
-          
-          
-        
-      
-      <script>app.initialize({version:"1.1",url:{base:"../.."}})</script>
+      <script src="../../assets/javascripts/application.320a2241.js"></script>
+      <script>app.initialize({version:"1.1",url:{base:"../.."}}),"serviceWorker"in navigator&&navigator.serviceWorker.register("/service-worker.js",{scope:"/"}).then(function(e){console.log("PWA Registration succeeded. Scope is "+e.scope)}).catch(function(e){console.log("PWA Registration failed with "+e)})</script>
       
         <script src="../../_static/js/extra.js?v=16"></script>
-      
-        <script src="https://cdnjs.loli.net/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
     
   </body>
