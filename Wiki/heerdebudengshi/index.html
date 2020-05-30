@@ -1337,8 +1337,29 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    证明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    推论
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    方法
+  </a>
   
 </li>
       
@@ -1836,8 +1857,29 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    证明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    推论
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    方法
+  </a>
   
 </li>
       
@@ -1869,9 +1911,112 @@
                   <h1>赫尔德不等式</h1>
                 
                 <h2 id="_1">检索字<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>heerdebudengshi; Holder 不等式; Holder inequalitites</p>
 <h2 id="_2">前置知识<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p><a href="../heshi/">和式</a> <a href="../kexibudengshi/">柯西不等式</a></p>
 <h2 id="_3">概念<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <h3 id="_4">基本定义<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>设<span><span class="MathJax_Preview">a_{ij}&gt;0(1\le i\le j\le n,1\le j\le m)</span><script type="math/tex">a_{ij}>0(1\le i\le j\le n,1\le j\le m)</script></span>，若<span><span class="MathJax_Preview">\lambda_j&gt;0(1\le j\le m)</span><script type="math/tex">\lambda_j>0(1\le j\le m)</script></span>，且<span><span class="MathJax_Preview">\sum\lambda_j=1</span><script type="math/tex">\sum\lambda_j=1</script></span>，则有</p>
+<div>
+<div class="MathJax_Preview">
+\prod_{j=1}^m(\sum_{i=1}^na_{ij})^{\lambda_j}\ge\sum_{i=1}^n\prod_{j=1}^ma_{ij}^{\lambda_j}
+</div>
+<script type="math/tex; mode=display">
+\prod_{j=1}^m(\sum_{i=1}^na_{ij})^{\lambda_j}\ge\sum_{i=1}^n\prod_{j=1}^ma_{ij}^{\lambda_j}
+</script>
+</div>
+<p>上式称为<strong>赫尔德（Holder）不等式</strong>。不难看出，Holder 不等式是卡尔松不等式的推广。</p>
+<p>注：出于各种考虑，本系列的词条<strong>不使用范数写法</strong>，<strong>不提及连续形式</strong>。</p>
+<p>m=2的形式如下：</p>
+<p>若<span><span class="MathJax_Preview">\{a_n\}</span><script type="math/tex">\{a_n\}</script></span>与<span><span class="MathJax_Preview">\{b_n\}</span><script type="math/tex">\{b_n\}</script></span>是正实数序列，<span><span class="MathJax_Preview">p,q&gt;1,\dfrac1p+\dfrac1q=1</span><script type="math/tex">p,q>1,\dfrac1p+\dfrac1q=1</script></span>，则：</p>
+<div>
+<div class="MathJax_Preview">
+\sum a_ib_i\le(\sum a_i^p)^{1/p}(\sum b_j^q)^{1/q}
+</div>
+<script type="math/tex; mode=display">
+\sum a_ib_i\le(\sum a_i^p)^{1/p}(\sum b_j^q)^{1/q}
+</script>
+</div>
+<h3 id="_5">证明<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>记<span><span class="MathJax_Preview">A_j=\sum\limits_{i=1}^na_{ij}</span><script type="math/tex">A_j=\sum\limits_{i=1}^na_{ij}</script></span>，则原不等式等价于</p>
+<div>
+<div class="MathJax_Preview">
+\sum_{i=1}^n\prod_{j=1}^m(\dfrac{a_{ij}}{A_j})^{\lambda_j}\le1
+</div>
+<script type="math/tex; mode=display">
+\sum_{i=1}^n\prod_{j=1}^m(\dfrac{a_{ij}}{A_j})^{\lambda_j}\le1
+</script>
+</div>
+<p>由于<span><span class="MathJax_Preview">f(x)=\ln x</span><script type="math/tex">f(x)=\ln x</script></span>为凸函数，故由<a href="../qinshengbudengshi/">加权 Jensen 不等式</a>，有</p>
+<div>
+<div class="MathJax_Preview">
+\sum_{j=1}^m\lambda_j\ln\dfrac{a_{ij}}{A_j}=\dfrac1{\sum\lambda_j}\sum_{j=1}^m\lambda_j\ln\dfrac{a_{ij}}{A_j}\le\ln\dfrac{\sum \lambda_ja_{ij}/A_j}{\sum\lambda_j}=\ln\sum_{j=1}^m\lambda_j\dfrac{a_{ij}}{A_j}
+</div>
+<script type="math/tex; mode=display">
+\sum_{j=1}^m\lambda_j\ln\dfrac{a_{ij}}{A_j}=\dfrac1{\sum\lambda_j}\sum_{j=1}^m\lambda_j\ln\dfrac{a_{ij}}{A_j}\le\ln\dfrac{\sum \lambda_ja_{ij}/A_j}{\sum\lambda_j}=\ln\sum_{j=1}^m\lambda_j\dfrac{a_{ij}}{A_j}
+</script>
+</div>
+<p>两边同时<span><span class="MathJax_Preview">\exp</span><script type="math/tex">\exp</script></span>，得</p>
+<div>
+<div class="MathJax_Preview">
+\prod_{j=1}^m(\dfrac{a_{ij}}{A_j})^{\lambda_j}\le\sum_{j=1}^m\lambda_j\dfrac{a_{ij}}{A_j}
+</div>
+<script type="math/tex; mode=display">
+\prod_{j=1}^m(\dfrac{a_{ij}}{A_j})^{\lambda_j}\le\sum_{j=1}^m\lambda_j\dfrac{a_{ij}}{A_j}
+</script>
+</div>
+<p>两边同时对<span><span class="MathJax_Preview">i=1,2,...,n</span><script type="math/tex">i=1,2,...,n</script></span>求和，则得证。</p>
+<h3 id="_6">推论<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>设<span><span class="MathJax_Preview">\{a_n\}</span><script type="math/tex">\{a_n\}</script></span>与<span><span class="MathJax_Preview">\{b_n\}</span><script type="math/tex">\{b_n\}</script></span>为正实数序列，<span><span class="MathJax_Preview">m&gt;0</span><script type="math/tex">m>0</script></span>或<span><span class="MathJax_Preview">m&lt;-1</span><script type="math/tex">m<-1</script></span>，则
+$$
+\sum\dfrac{a_i<sup>{m+1}}{b_i</sup>m}\ge\dfrac{(\sum a_i)^{m+1}}{(\sum b_j)^m}
+$$
+当且仅当存在一个常实数<span><span class="MathJax_Preview">\lambda</span><script type="math/tex">\lambda</script></span>使<span><span class="MathJax_Preview">a_i=\lambda b_i</span><script type="math/tex">a_i=\lambda b_i</script></span>时取等。</p>
+<p><strong>证明</strong></p>
+<p>原不等式等价于
+$$
+(\sum\dfrac{a_i<sup>{m+1}}{b_i</sup>m})(\sum b_j)^m\ge(\sum a_i)^{m+1}
+$$
+即
+$$
+(\sum\dfrac{a_i<sup>{m+1}}{b_i</sup>m})^{\dfrac1{m+1}}(\sum b_j)^{\dfrac{m}{m+1}}\ge\sum a_i
+$$
+由二元 Holder 不等式显然。</p>
+<h2 id="_7">方法<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<p><strong>例1</strong> 设<span><span class="MathJax_Preview">p,q&gt;0,x\in[0,\dfrac\pi2]</span><script type="math/tex">p,q>0,x\in[0,\dfrac\pi2]</script></span>，求<span><span class="MathJax_Preview">\dfrac p{\sqrt{\sin x}}+\dfrac q{\sqrt{\cos y}}</span><script type="math/tex">\dfrac p{\sqrt{\sin x}}+\dfrac q{\sqrt{\cos y}}</script></span>的最小值。</p>
+<p><strong>解答</strong></p>
+<p>这个形式给人一种强烈的感觉，即希望用卡尔松不等式消去带有根号的分母。但利用通常的思路</p>
+<div>
+<div class="MathJax_Preview">
+(\dfrac p{\sqrt{\sin x}}+\dfrac q{\sqrt{\cos y}})(\dfrac p{\sqrt{\sin x}}+\dfrac q{\sqrt{\cos y}})(\sin x+\cos y)\ge(p^{2/3}+q^{2/3})^3
+</div>
+<script type="math/tex; mode=display">
+(\dfrac p{\sqrt{\sin x}}+\dfrac q{\sqrt{\cos y}})(\dfrac p{\sqrt{\sin x}}+\dfrac q{\sqrt{\cos y}})(\sin x+\cos y)\ge(p^{2/3}+q^{2/3})^3
+</script>
+</div>
+<p>发现有一项<span><span class="MathJax_Preview">\sin x+\cos y</span><script type="math/tex">\sin x+\cos y</script></span>难以处理。不难想到<span><span class="MathJax_Preview">\sin^2x+\cos^2y=1</span><script type="math/tex">\sin^2x+\cos^2y=1</script></span>，因而若两个三角函数上方的次数为2，则较容易处理。而为了消去分母，<span><span class="MathJax_Preview">\dfrac p{\sqrt{\sin x}}+\dfrac q{\sqrt{\cos y}}</span><script type="math/tex">\dfrac p{\sqrt{\sin x}}+\dfrac q{\sqrt{\cos y}}</script></span>的次数也应当加倍，即</p>
+<div>
+<div class="MathJax_Preview">
+(\dfrac p{\sqrt{\sin x}}+\dfrac q{\sqrt{\cos y}})^4(\sin^2 x+\cos^2 y)\ge(p^{4/5}+q^{4/5})^5
+</div>
+<script type="math/tex; mode=display">
+(\dfrac p{\sqrt{\sin x}}+\dfrac q{\sqrt{\cos y}})^4(\sin^2 x+\cos^2 y)\ge(p^{4/5}+q^{4/5})^5
+</script>
+</div>
+<p>故有<span><span class="MathJax_Preview">\dfrac p{\sqrt{\sin x}}+\dfrac q{\sqrt{\cos y}}\ge(p^{4/5}+q^{4/5})^{5/4}</span><script type="math/tex">\dfrac p{\sqrt{\sin x}}+\dfrac q{\sqrt{\cos y}}\ge(p^{4/5}+q^{4/5})^{5/4}</script></span>。</p>
+<p>但事实上，遇到这种不太好调整次数的，可采用 Holder 不等式+待定常数。</p>
+<p>期望使用 Holder 不等式来消去分母。令<span><span class="MathJax_Preview">a+b=1</span><script type="math/tex">a+b=1</script></span>，则</p>
+<div>
+<div class="MathJax_Preview">
+(\dfrac p{\sqrt{\sin x}}+\dfrac q{\sqrt{\cos y}})^a(\sin^2 x+\cos^2 y)^b\ge(\dfrac p{\sqrt{\sin x}})^a(\sin^2x)^b+(\dfrac q{\sqrt{\cos x}})^a(\cos^2x)^b
+</div>
+<script type="math/tex; mode=display">
+(\dfrac p{\sqrt{\sin x}}+\dfrac q{\sqrt{\cos y}})^a(\sin^2 x+\cos^2 y)^b\ge(\dfrac p{\sqrt{\sin x}})^a(\sin^2x)^b+(\dfrac q{\sqrt{\cos x}})^a(\cos^2x)^b
+</script>
+</div>
+<p>为了消去分母，应当有<span><span class="MathJax_Preview">a=4b</span><script type="math/tex">a=4b</script></span>，结合<span><span class="MathJax_Preview">a+b=1</span><script type="math/tex">a+b=1</script></span>，有<span><span class="MathJax_Preview">a=4/5</span><script type="math/tex">a=4/5</script></span>，则得到了同样的结论。</p>
+<p><strong>另一常用结论</strong> 设<span><span class="MathJax_Preview">a,b,c&gt;0,k\in\textbf{N}^*</span><script type="math/tex">a,b,c>0,k\in\textbf{N}^*</script></span>，求证：<span><span class="MathJax_Preview">\sum\limits_{cyc}\dfrac{a^{k+1}}{b^k}\ge\sum\limits_{cyc}\dfrac{a^k}{b^{k-1}}</span><script type="math/tex">\sum\limits_{cyc}\dfrac{a^{k+1}}{b^k}\ge\sum\limits_{cyc}\dfrac{a^k}{b^{k-1}}</script></span>。</p>
+<p>证明较易，留作练习。</p>
                 
                   
                 
