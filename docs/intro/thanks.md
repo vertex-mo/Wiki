@@ -6,7 +6,7 @@
 
 10元及以上的款项将会被记录于本页底部以示感谢。
 
-![img](https://s1.ax1x.com/2020/03/20/8g4EY8.png)![img](https://s1.ax1x.com/2020/03/20/8gz2jI.png)
+![img](images\ma2.png)![img](images\ma.png)
 
 * * *
 

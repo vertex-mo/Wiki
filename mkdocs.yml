@@ -97,6 +97,7 @@ nav:
         - 三角代换: Wiki/sanjiaodaihuan.md
         - 增量代换: Wiki/zengliangdaihuan.md
         - 配方法与SOS: Wiki/peifangfayusos.md
+        - 不等式强弱律: Wiki/budengshiqiangruolv.md
     - 抽象代数: 
         - 咕咕咕: Wiki/gugu.md
     - 复变函数: 
@@ -139,11 +140,12 @@ extra:
   copyright: '<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a> 和 <a href="https://github.com/zTrix/sata-license">SATA</a>'
   pagetime: 'on'
   manifest: 'manifest.webmanifest'
-  githash: ''
+  githash: 'b2ac3a9'
 
 extra_javascript:
   - '_static/js/extra.js?v=16'
   - 'https://cdnjs.loli.net/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
+  
 
 
 extra_css:

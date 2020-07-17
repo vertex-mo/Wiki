@@ -16,6 +16,9 @@
 
 由于很多人抗拒百度，因此我不得不写下相关的教程。如果您已经熟知这些东西，请跳过即可。
 
+!!! warning "注意"
+    如果您懂得 markdown 和 LaTeX 的语法，请点击typora左下角第二个按钮，进入源代码模式，并直接键入您的 markdown 源码。
+
 ### markdown
 
 0.换行
@@ -197,12 +200,6 @@ $$
 
 ### $\LaTeX$
 
-参考：https://blog.csdn.net/happyday_d/article/details/83715440
-
-纠正：矩阵应该是：
-
-`$\begin{pmatrix}X&X&X\\X&X&X\\X&X&X\end{pmatrix}$`
-
-$\begin{pmatrix}X&X&X\\X&X&X\\X&X&X\end{pmatrix}$
+参考：https://www.luogu.com.cn/blog/IowaBattleship/latex-gong-shi-tai-quan
 
 LaTeX 的格式规范：https://oi-wiki.org/intro/htc/#latex

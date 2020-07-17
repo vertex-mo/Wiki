@@ -4,6 +4,8 @@ title: 顶点数竞百科
 
 # 欢迎来到顶点数竞百科 ！
 
+[![用户QQ群组](https://img.shields.io/badge/VertexMO--Group-加入用户QQ群-brightgreen.svg?style=flat-square)]() [![开发组](https://img.shields.io/badge/VertexMO--Team-加入开发/编写/管理组-brightgreen.svg?style=flat-square)](https://jq.qq.com/?_wv=1027&k=5xp8GNn) [![GitHub watchers](https://img.shields.io/github/watchers/vertex-mo/Wiki.svg?style=social&label=Watch)](https://github.com/vertex-mo/Wiki) [![GitHub stars](https://img.shields.io/github/stars/vertex-mo/Wiki.svg?style=social&label=Stars)](https://github.com/vertex-mo/Wiki)
+
 本站为隶属于 **VertexMO** 的教程部分 。
 
 1980年，在大连召开的第一届全国数学普及工作会议上，确定将数学竞赛作为中国数学会及各省、市、自治区数学会的一项经常性工作，每年9月第二个星期日举行“**全国高中数学联合竞赛**”。  
